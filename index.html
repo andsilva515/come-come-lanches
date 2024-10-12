@@ -7,103 +7,84 @@
     <link rel="stylesheet" href="styles/output.css" />
     <title>Come come Lanches - O melhor lanche da cidade.</title>
 </head>
-<body>
-    
-    <!--INÍCIO HEADER-->
-    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
-        <div class="w-full h-full flex flex-col justify-center items-center">
-            <img 
-              src="./assets/Logo.jpg" 
-              alt="Logo Come Come Lanches"
-              class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
-            /> 
-            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Come Come Lanches</h1>
-            <span class="text-white font-medium">Rua Capitão Francisco Lima 41, Centro - Nepomuceno - MG</span>
-            
-            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
-                <span class="text-white font-medium">Segunda a Sexta - 19:00 as 00:00</span>         
-            </div>
-
-            <!-- 
-            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
-                <span class="text-white font-medium">Sábados - 19:00 a 01:00</span>
-           </div>
-            -->
-
-           <!-- 
-           <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
-                <span class="text-white font-medium">Domingo - 19:00 as 23:00</span> 
-            </div>
-           -->
-
-        </div>
-    </header>
-    <!--FIM HEADER-->      
-
+<body>   
+            <!--INÍCIO HEADER-->
+            <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+                <div class="w-full h-full flex flex-col justify-center items-center">
+                    <img 
+                    src="./assets/Logo.jpg" 
+                    alt="Logo Come Come Lanches"
+                    class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+                    /> 
+                    <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Come Come Lanches</h1>
+                    <span class="text-white font-medium">Rua Capitão Francisco Lima 41, Centro - Nepomuceno - MG</span>
+                    
+                    <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+                        <span class="text-white font-medium">Segunda a Sexta - 19:00 as 00:00</span>         
+                    </div>         
+                </div>
+            </header>
+            <!--FIM HEADER-->      
             <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
                 Conheça nosso cardápio
-            </h2>
-            
+            </h2>            
             <hr/>
-
             <div class="mx-auto max-w-7xl px-2 my-2">
                 <h2 class="font-bold text-3xl">
                     Lanches
                 </h2>                
-            </div>
-
-          
-
+            </div>        
             <!--INÍCIO MENU-->
             <div id="menu">
                 <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mx-auto max-w-7xl px-2 mb-16">
                     <!--INÍCIO GRID LANCHES-->
             <!--INÍCIO PRODUTO ITEM 1-->
+
             <div class="flex gap-2">
-                <img src="./assets/hamb-1.png" alt="Come-Come Maionese"
+                <img src="./assets/hamb-1.png" alt="Come-Come Burguer"
                 class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+                
                 <div>
                 <p class="font-bold">Come-Come Burguer</p>
-                <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.
+                <p class="text-sm">Pão, hamburguer, mussarela, alface, tomate, batata palha e molho especial.
                 </p>
                 <div class="flex items-center gap-2 justify-between mt-3">
-                <p class="font-bold text-lg">R$ 10.00</p>
-                <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Come-Come Maionese" data-price="30.00">
+                <p class="font-bold text-lg">R$ 20.00</p>
+                <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Come-Come Burguer" data-price="20.00">
                 <i class="fa fa-cart-plus text-lg text-white"></i>
                 </button>
                 </div>
                 </div>
                 </div>
             <!--FIM PRODUTO ITEM 1--> 
-
             <!--INÍCIO PRODUTO ITEM 2-->
             <div class="flex gap-2">
                 <img src="./assets/hamb-2.png" alt="Come-Come Maionese"
-                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
-                <div>
-                <p class="font-bold">Come-Come Maionese</p>
-                <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.
-                </p>
-                <div class="flex items-center gap-2 justify-between mt-3">
-                <p class="font-bold text-lg">R$ 10.00</p>
-                <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Come-Come Maionese" data-price="30.00">
-                <i class="fa fa-cart-plus text-lg text-white"></i>
-                </button>
-                </div>
-                </div>
-                </div>
-            <!--FIM PRODUTO ITEM 2-->           
-
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+              <div>
+                   <p class="font-bold">Come-Come Maionese</p>
+                   <p class="w-full" >Pão, hamburguer, mussarela, batata palha, maionese.</p>                   
+                   <div class="flex items-center gap-2 justify-between mt-3">
+                      <p class="font-bold text-lg">R$ 10.00</p>               
+                   <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Come-Come Maionese" data-price="10.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                   </button>
+              </div>
+            </div>
+            </div>
+            <!--FIM PRODUTO ITEM 2-->        
             <!--INÍCIO PRODUTO ITEM 3-->
                    <div class="flex gap-2">
-                   <img src="./assets/hamb-3.png" alt="Hamburguer Salad"
+                   <img src="./assets/hamb-3.png" alt="Come-Come Egg"
                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
                    <div>
                    <p class="font-bold">Come-Come Egg</p>
-                   <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.</p>
+                   <p class="text-sm">Pão, hamburguer, mussarela, ovo, batata palha, maionese e molho especial.
+                   </p>
                    <div class="flex items-center gap-2 justify-between mt-3">
                    <p class="font-bold text-lg">R$ 12.00</p>
-                   <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Salad" data-price="35.90">
+                   <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Come-Come Egg" data-price="12.00">
                    <i class="fa fa-cart-plus text-lg text-white"></i>
                    </button>
                    </div>
@@ -112,15 +93,15 @@
             <!--FIM PRODUTO ITEM 3-->
             <!--INÍCIO PRODUTO ITEM 4-->
                    <div class="flex gap-2">
-                   <img src="./assets/hamb-4.png" alt="Hamburguer da Casa"
+                   <img src="./assets/hamb-4.png" alt="Come-Come Salada"
                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
                    <div>
                    <p class="font-bold">Come-Come Salada</p>
-                   <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.
+                   <p class="text-sm">Pão, hamburguer, mussarela, alface, tomate, batata palha e molho especial.
                    </p>
                    <div class="flex items-center gap-2 justify-between mt-3">
                    <p class="font-bold text-lg">R$ 14.00</p>
-                   <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer da Casa" data-price="30.00">
+                   <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Come-Come Salada" data-price="14.00">
                    <i class="fa fa-cart-plus text-lg text-white"></i>
                    </button>
                    </div>
@@ -129,14 +110,15 @@
             <!--FIM PRODUTO ITEM 4-->
             <!--INÍCIO PRODUTO ITEM 5-->
                    <div class="flex gap-2">
-                   <img src="./assets/hamb-5.png" alt="Hamburguer de Bacon"
+                   <img src="./assets/hamb-5.png" alt="Come-Come Salada Egg"
                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
                    <div>
                    <p class="font-bold">Come-Come Salada Egg</p>
-                   <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.</p>
+                   <p class="text-sm">Pão, hamburguer, mussarela, alface, tomate, ovo, batata palha e molho especial.
+                   </p>
                    <div class="flex items-center gap-2 justify-between mt-3">
                    <p class="font-bold text-lg">R$ 15.00</p>
-                   <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer de Bacon" data-price="35.00">
+                   <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Come-Come Salada Egg" data-price="15.00">
                    <i class="fa fa-cart-plus text-lg text-white"></i>
                    </button>
                    </div>
@@ -145,15 +127,15 @@
             <!--FIM PRODUTO ITEM 5-->
             <!--INÍCIO PRODUTO ITEM 6-->
                    <div class="flex gap-2">
-                   <img src="./assets/hamb-6.png" alt="Hamburguer Smash"
+                   <img src="./assets/hamb-6.png" alt="Come-Come Bacon"
                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
                    <div>
-                   <p class="font-bold">Come-Come Bacon</p>
-                   <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.
+                   <p class="font-bold">Come-Come Bacon</p>     
+                   <p class="text-sm">Pão, hamburguer, mussarela, bacon, alface, tomate, batata palha e molho especial.       
                    </p>
-                   <div class="flex items-center gap-2 justify-between mt-3">
+                   <div class="flex items-center gap-2 justify-between mt-3">   
                    <p class="font-bold text-lg">R$ 25.00</p>
-                   <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Smash" data-price="18.90">
+                   <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Come-Come Bacon" data-price="25.00">
                    <i class="fa fa-cart-plus text-lg text-white"></i>
                    </button>
                    </div>
@@ -162,15 +144,15 @@
             <!--FIM PRODUTO ITEM 6-->
             <!--INÍCIO PRODUTO ITEM 7 -->
                    <div class="flex gap-2">
-                   <img src="./assets/hamb-7.png" alt="Hamburguer Smash"
+                   <img src="./assets/hamb-7.png" alt="Come-Come Bacon Egg"
                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
                    <div>
                    <p class="font-bold">Come-Come Bacon Egg</p>
-                   <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.
+                   <p class="text-sm">Pão, hamburguer, mussarela, bacon, alface, tomate, ovo, batata palha e molho especial.
                    </p>
                    <div class="flex items-center gap-2 justify-between mt-3">
                    <p class="font-bold text-lg">R$ 26.00</p>
-                   <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Smash" data-price="18.90">
+                   <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Come-Come Bacon Egg" data-price="26.00">
                    <i class="fa fa-cart-plus text-lg text-white"></i>
                    </button>
                    </div>
@@ -178,154 +160,182 @@
                    </div>
            <!--FIM PRODUTO ITEM 7 -->
            <!--INÍCIO PRODUTO ITEM 8 -->
-                   <div class="flex gap-2">
-                   <img src="./assets/hamb-8.png" alt="Hamburguer Smash"
-                   class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
-                   <div>
-                   <p class="font-bold">Come-Come Tudo</p>
-                   <!--<p class="font-bold">Come-Come Duplo</p>-->
-                   <!--<p class="font-bold">Come-Come Mega</p>-->
-                   <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.
-                   </p>
-                   <div class="flex items-center gap-2 justify-between mt-3">
-                   <p class="font-bold text-lg">R$ 18.90</p>
-                   <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Smash" data-price="18.90">
-                   <i class="fa fa-cart-plus text-lg text-white"></i>
-                   </button>
-                   </div>
-                   </div>
-                   </div>
-           <!--FIM PRODUTO ITEM 8 -->
-           <!--INÍCIO PRODUTO ITEM 9  -->
-                   <div class="flex gap-2">
-                   <img src="./assets/hamb-1.png" alt="Hamburguer Smash"
-                   class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
-                   <div>
-                   <p class="font-bold">Come-Come Calabresa</p>
-                   <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.
-                   </p>
-                   <div class="flex items-center gap-2 justify-between mt-3">
-                   <p class="font-bold text-lg">R$ 23.00</p>
-                   <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Smash" data-price="18.90">
-                   <i class="fa fa-cart-plus text-lg text-white"></i>
-                   </button>
-                   </div>
-                   </div>
-                   </div>
-           <!-- FIM PRODUTO ITEM 9 -->
-                   
-            <!--FIM GRID PRODUTOS -->
-                   </main>
-
-              <hr>     
-                   
-        <div class="mx-auto max-w-7xl px-2 my-2">
-            <h2 class="font-bold text-3xl">
-                Bebidas
-            </h2>
-        </div>
-            
-             <!-- INÍCIO GRID BEBIDAS -->
-
-             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mx-auto max-w-7xl px-2 mb-16" id="menu">
-
-                 <!--INÍCIO PRODUTO ITEM BEBIDAS 1  -->
-                 <div class="flex gap-2 w-full">
-                    <img src="./assets/refri-1.png" alt="Hamburguer Smash"
+                    <div class="flex gap-2">
+                    <img src="./assets/hamb-1.png" alt="Come-Come Calabresa Egg"
                     class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
-
-                    <div class="w-full">
-                    <p class="font-bold">Coca lata</p>
-
+                    <div>
+                    <p class="font-bold">Come-Come Calabresa Egg</p>
+                    <p class="text-sm">Pão, calabressa, mussarela, alface, tomate, ovo, batata palha e molho especial.
+                    </p>
                     <div class="flex items-center gap-2 justify-between mt-3">
-                    <p class="font-bold text-lg">R$ 6.00</p>
-                    <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Smash" data-price="18.90">
+                    <p class="font-bold text-lg">R$ 24.00</p>
+                    <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Come-Come Calabresa Egg" data-price="24.00">
                     <i class="fa fa-cart-plus text-lg text-white"></i>
                     </button>
                     </div>
                     </div>
                     </div>
-            <!-- FIM PRODUTO ITEM BEBIDAS 1 -->         
-
-               <!--INÍCIO PRODUTO ITEM BEBIDAS 2  -->
+           <!--FIM PRODUTO ITEM 8-->
+           <!--INÍCIO PRODUTO ITEM 9-->
+                   <div class="flex gap-2">
+                   <img src="./assets/hamb-2.png" alt="Come-Come Calabresa"
+                   class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+                   <div>
+                   <p class="font-bold">Come-Come Calabresa</p>
+                   <p class="text-sm">Pão, calabressa, mussarela, alface, tomate, batata palha e molho especial.
+                   </p>
+                   <div class="flex items-center gap-2 justify-between mt-3">
+                   <p class="font-bold text-lg">R$ 23.00</p>
+                   <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Come-Come Calabresa" data-price="23.00">
+                   <i class="fa fa-cart-plus text-lg text-white"></i>
+                   </button>
+                   </div>
+                   </div>
+                   </div>
+           <!-- FIM PRODUTO ITEM 9-->                   
+            <!--FIM GRID PRODUTOS-->
+                   </main>
+              <hr />               
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl">
+                Bebidas
+            </h2>
+        </div>            
+             <!-- INÍCIO GRID BEBIDAS -->
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mx-auto max-w-7xl px-2 mb-16" id="menu">
+                 <!--INÍCIO PRODUTO ITEM BEBIDAS 1  -->
+                 <div class="flex gap-2 w-full">
+                    <img src="./assets/refri-1.png" alt="Coca lata"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+                    <div class="w-full">
+                    <p class="font-bold">Coca lata</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$ 5.00</p>
+                    <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Coca lata" data-price="5.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                    </div>
+                    </div>
+                    </div>
+            <!-- FIM PRODUTO ITEM BEBIDAS 1-->         
+               <!--INÍCIO PRODUTO ITEM BEBIDAS 2-->
                <div class="flex gap-2 w-full">
-                <img src="./assets/refri-2.png" alt="Hamburguer Smash"
+                <img src="./assets/refri-2.png" alt="Guaraná"
                 class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
-
                 <div class="w-full">
-                <p class="font-bold">Guaraná</p>  
-                             
+                <p class="font-bold">Guaraná</p>                             
                 <div class="flex items-center gap-2 justify-between mt-3">
-                <p class="font-bold text-lg">R$ 23.00</p>
-                <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Smash" data-price="18.90">
+                <p class="font-bold text-lg">R$ 5.00</p>
+                <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Guarana" data-price="5.00">
                 <i class="fa fa-cart-plus text-lg text-white"></i>
                 </button>
                 </div>
                 </div>
                 </div>
-        <!-- FIM PRODUTO ITEM BEBIDAS 2 -->
-                   <!--INÍCIO PRODUTO ITEM BEBIDAS 3  
-               <div class="flex gap-2">
-                <img src="./assets/refri-1.png" alt="Hamburguer Smash"
+        <!-- FIM PRODUTO ITEM BEBIDAS 2-->
+         <!--INÍCIO PRODUTO ITEM BEBIDAS 3-->
+               <div class="flex gap-2 w-full">
+                <img src="./assets/refri-1.png" alt="água mineral"
                 class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
-                <div>
-                <p class="font-bold">Água mineiral</p>               
+                <div class="w-full">
+                <p class="font-bold">Água mineral</p>
                 <div class="flex items-center gap-2 justify-between mt-3">
-                <p class="font-bold text-lg">R$ 23.00</p>
-                <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Smash" data-price="18.90">
+                <p class="font-bold text-lg">R$ 4.00</p>
+                <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Agua mineiral" data-price="4.00">
                 <i class="fa fa-cart-plus text-lg text-white"></i>
                 </button>
                 </div>
                 </div>
                 </div>
-         FIM PRODUTO ITEM BEBIDAS 3 -->
+        <!-- FIM PRODUTO ITEM BEBIDAS 3-->  
              </div>
-            <!-- FIM GRID BEBIDAS --> 
-    </div>    
-    <!--FIM MENU-->
-   
-    <!--INÍCIO MODAL CART-->
-
-    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden">
-
-        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
-            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
-            
-            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>  
-
-            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
-
-            <p class="font-bold mt-4">Endereço de entrega: </p>
-            <input
-                type="text"
-                placeholder="Digite seu edenreço completo..."
-                id="address"
-                class="w-full border-2 p-2 rounded my-1"
-            />
-            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
-
-            <div class="flex items-center justify-between mt-5 w-full">
-                <button id="close-modal btn">Fechar</button>
-                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!--FIM MODAL CART-->
-   
-    <!--INÍCIO BUTTON CART FOOTER-->
-    <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
-        <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
-            (<span id="cart-count">0</span>)
-            Veja meu carrinho
-            <i class="fa fa-cart-plus text-lg text-white"></i>
-        </button>
-    </footer>
-    <!--FIM BUTTON CART FOOTER-->    
-
+            <!-- FIM GRID BEBIDAS--> 
+            <hr />
+            <div class="mx-auto max-w-7xl px-2 my-2">
+                <h2 class="font-bold text-3xl">
+                    Outros
+                </h2>
+            </div>                
+                 <!-- INÍCIO GRID OUTROS -->    
+                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mx-auto max-w-7xl px-2 mb-16" id="menu">    
+                     <!--INÍCIO PRODUTO ITEM OUTROS 1  -->
+                     <div class="flex gap-2 w-full">
+                        <img src="./assets/refri-2.png" alt="Chokito"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />    
+                        <div class="w-full">
+                        <p class="font-bold">Chokito</p>    
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 5.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Chokito" data-price="5.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                        </div>
+                        </div>
+                        </div>
+                <!-- FIM PRODUTO ITEM OUTROS 1-->      
+                <!--INÍCIO PRODUTO ITEM OUTROS 2-->
+                   <div class="flex gap-2 w-full">
+                    <img src="./assets/refri-1.png" alt="Préstigio"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />   
+                    <div class="w-full">
+                    <p class="font-bold">Préstigio</p>                                 
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$ 5.00</p>
+                    <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Prestigio" data-price="5.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                    </div>
+                    </div>
+                    </div>
+            <!-- FIM PRODUTO ITEM OUTROS 2-->   
+             <!--INÍCIO PRODUTO ITEM OUTROS 3 -->
+                   <div class="flex gap-2 w-full">
+                    <img src="./assets/refri-2.png" alt="Halls"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />    
+                    <div class="w-full">
+                    <p class="font-bold">Halls</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$ 2.00</p>
+                    <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Hamburguer Smash" data-price="2.00">
+                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                    </div>
+                    </div>
+                    </div>
+            <!-- FIM PRODUTO ITEM OUROS 3-->    
+                 </div>
+                <!-- FIM GRID OUTROS-->               
+            </div> 
+            <!--FIM MENU-->
+            <!--INÍCIO MODAL CART-->
+                <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden">
+                    <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+                       <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>            
+                        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>  
+                        <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+                        <p class="font-bold mt-4">Endereço de entrega: </p>
+                        <input
+                            type="text"
+                            placeholder="Digite seu edenreço completo..."
+                            id="address"
+                            class="w-full border-2 p-2 rounded my-1"
+                        />
+                        <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+                        <div class="flex items-center justify-between mt-5 w-full">
+                            <button id="close-modal btn">Fechar</button>
+                            <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+                        </div>
+                    </div>
+                </div>  
+            <!--FIM MODAL CART-->   
+            <!--INÍCIO BUTTON CART FOOTER-->
+                <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
+                    <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+                        (<span id="cart-count">0</span>)
+                        Veja meu carrinho
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </footer>
+            <!--FIM BUTTON CART FOOTER-->    
 </body>
 </html>
