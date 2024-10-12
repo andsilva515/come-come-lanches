@@ -40,37 +40,41 @@
     </header>
     <!--FIM HEADER-->      
 
-    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
-        Conheça nosso cardápio
-    </h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+                Conheça nosso cardápio
+            </h2>
+            
+            <hr/>
 
-    <div class="mx-auto max-w-7xl px-2 my-2">
-        <h2 class="font-bold text-3xl">
-            Lanches
-        </h2>
-    </div>
+            <div class="mx-auto max-w-7xl px-2 my-2">
+                <h2 class="font-bold text-3xl">
+                    Lanches
+                </h2>                
+            </div>
 
-    <!--INÍCIO MENU-->
-    <div id="menu">
-        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mx-auto max-w-7xl px-2 mb-16">
-            <!--INÍCIO GRID LANCHES-->
-    <!--INÍCIO PRODUTO ITEM 1-->
-    <div class="flex gap-2">
-        <img src="./assets/hamb-1.png" alt="Come-Come Maionese"
-        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
-        <div>
-        <p class="font-bold">Come-Come Burguer</p>
-        <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.
-        </p>
-        <div class="flex items-center gap-2 justify-between mt-3">
-        <p class="font-bold text-lg">R$ 10.00</p>
-        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Come-Come Maionese" data-price="30.00">
-        <i class="fa fa-cart-plus text-lg text-white"></i>
-        </button>
-        </div>
-        </div>
-        </div>
-    <!--FIM PRODUTO ITEM 1--> 
+          
+
+            <!--INÍCIO MENU-->
+            <div id="menu">
+                <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mx-auto max-w-7xl px-2 mb-16">
+                    <!--INÍCIO GRID LANCHES-->
+            <!--INÍCIO PRODUTO ITEM 1-->
+            <div class="flex gap-2">
+                <img src="./assets/hamb-1.png" alt="Come-Come Maionese"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+                <div>
+                <p class="font-bold">Come-Come Burguer</p>
+                <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.
+                </p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                <p class="font-bold text-lg">R$ 10.00</p>
+                <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Come-Come Maionese" data-price="30.00">
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+                </button>
+                </div>
+                </div>
+                </div>
+            <!--FIM PRODUTO ITEM 1--> 
 
             <!--INÍCIO PRODUTO ITEM 2-->
             <div class="flex gap-2">
@@ -212,6 +216,8 @@
                    
             <!--FIM GRID PRODUTOS -->
                    </main>
+
+              <hr>     
                    
         <div class="mx-auto max-w-7xl px-2 my-2">
             <h2 class="font-bold text-3xl">
@@ -253,23 +259,27 @@
                 </div>
                 </div>
                 </div>
-        <!-- FIM PRODUTO ITEM BEBIDAS 2 --> 
-
-
-
-
+        <!-- FIM PRODUTO ITEM BEBIDAS 2 -->
              </div>
-
-            <!-- FIM GRID BEBIDAS -->
-        
-
-
-
+            <!-- FIM GRID BEBIDAS --> 
     </div>    
     <!--FIM MENU-->
+   
     <!--INÍCIO MODAL CART-->
     <!--FIM MODAL CART-->
+   
     <!--INÍCIO BUTTON CART FOOTER-->
+
+    <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
+        <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+            (<span id="cart-count">2</span>)
+            Veja meu carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+
+
     <!--FIM BUTTON CART FOOTER-->    
+
 </body>
 </html>
