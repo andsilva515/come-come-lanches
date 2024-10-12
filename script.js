@@ -48,12 +48,43 @@ function addtoCart(name, price){
     if(existingItem){
         //Se o item já existe, aumenta apenas a quantidade + 1
         existingItem.quantity += 1;
-        return;
+    }else{
+       cart.push({
+         name,
+         price,
+         quantity: 1,
+    })      
+
     }
-    
-    cart.push({
-        name,
-        price,
-        quantity: 1,
+
+    updateCartModal()
+}
+
+//Atualiza o carrinho
+function updateCartModal(){
+    cartItemsContainer.innerHTML = "";
+    let total = 0;
+
+    cart.forEach(item => {
+        const cartItemElement = document.createElement("div");
+
+        cartItemElement.innerHTML = `
+            <div>
+                <div>
+                    <p>${item.name}</p>
+                    <p>${item.quantity}</p>
+                    <p>${item.price}</p>
+                </div>
+
+                <div>
+                    <button>
+                        Remover
+                    </button>
+                </div>
+            </div>
+        `
+
+        cartItemsContainer.appendChild(cartItemElement)
     })
+
 }
