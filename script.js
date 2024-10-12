@@ -14,6 +14,7 @@ let cart = [];
 
 // Abrir o modal do carrinho
 cartBtn.addEventListener("click", function(){
+    updateCartModal();
     cartModal.style.display = "flex"
 })
 
