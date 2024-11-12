@@ -130,16 +130,33 @@ function removeItemCart(name){
     }
 }
 
-// Valida campo endereço
-addressInput.addEventListener("input", function(event){
-    let inputValue = event.target.value;
+// Valida todos os campos do endereço
+document.getElementById("checkout-btn").addEventListener("click", function(event) {
+    const requiredFields = ["street", "number", "neighborhood", "reference"];
+    let allValid = true;
 
-    if(inputValue !== ""){
-        addressInput.classList.remove("border-red-500")
-        addressWarn.classList.add("hidden")
+    requiredFields.forEach(fieldId => {
+        const input = document.getElementById(fieldId);
+        if (input.value.trim() === "") {
+            input.classList.add("border-red-500");
+            allValid = false;
+        } else {
+            input.classList.remove("border-red-500");
+        }
+    });
+
+    const addressWarn = document.getElementById("address-warn");
+    if (!allValid) {
+        addressWarn.classList.remove("hidden");
+    } else {
+        addressWarn.classList.add("hidden");
+        // Lógica de envio do pedido aqui
+        alert("Endereço válido! Pedido enviado.");
     }
-})
 
+    // Impede o envio se houver campos inválidos
+    event.preventDefault();
+    });
 
 // Finaliza pedido
 checkoutBtn.addEventListener("click", function(){  
