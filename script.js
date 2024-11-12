@@ -151,7 +151,7 @@ document.getElementById("checkout-btn").addEventListener("click", function(event
     } else {
         addressWarn.classList.add("hidden");
         // Lógica de envio do pedido aqui
-        alert("Endereço válido! Pedido enviado.");
+        alert("Pedido enviado com sucesso!!");
     }
 
     // Impede o envio se houver campos inválidos
