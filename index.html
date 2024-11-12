@@ -329,19 +329,28 @@
                     <hr>                    
                     <!--FIM MODAL MENU-->
                     
-                    <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho<h2>            
+                    
+                    <h2 class="text-center font-bold text-2xl mb-2 mt-4">Meu carrinho</h2>            
                     <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>                      
                     <p class="font-bold">Taxa de Entrega: <span id="delivery-fee">0.00</span></p> <!-- Linha da taxa de entrega -->
                     <p class="font-bold">Total: <span id="cart-total">0.00</span></p> <!-- Total geral -->
                     
-                    <p class="font-bold mt-4">Endereço de entrega: </p>
-                    <input
-                        type="text"
-                        placeholder="Digite seu endereço completo..."
-                        id="address"
-                        class="w-full border-2 p-2 rounded my-1"
-                    />
+                    <p class="font-bold mt-4">Digite abaixo o endereço de entrega.</p>
+                    <p class="font-bold mt-4">Rua:</p>
+                    <input type="text" placeholder="" id="address" class="w-full border-2 p-2 rounded my-1"/>
+                    <p class="font-bold mt-4">Número:</p>
+                    <input type="text" placeholder="" id="address" class="w-full border-2 p-2 rounded my-1"/>
+                    <p class="font-bold mt-4">Bairro:</p>
+                    <input type="text" placeholder="" id="address" class="w-full border-2 p-2 rounded my-1"/>                    
+                    <p class="font-bold mt-4">Ponto de Referência:</p>
+                    <textarea type="text" placeholder="" id="address" class="w-full border-2 p-2 rounded my-1"></textarea>             
+
+
+                    <!-- 
                     <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+                    -->
+
+
                     <div class="flex items-center justify-between mt-5 w-full">
                         <button id="close-modal-btn">Fechar</button>
                         <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
