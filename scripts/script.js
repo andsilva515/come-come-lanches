@@ -132,7 +132,7 @@ function removeItemCart(name){
 
 // Valida todos os campos do endereço
 document.getElementById("checkout-btn").addEventListener("click", function(event) {
-    const requiredFields = ["street", "number", "neighborhood", "city", "reference"];
+    const requiredFields = ["recipient", "street", "number", "neighborhood", "city", "reference"];
     let allValid = true;
 
     requiredFields.forEach(fieldId => {
