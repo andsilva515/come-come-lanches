@@ -188,21 +188,32 @@
                         <p class="font-bold">Taxa de Entrega: <span id="delivery-fee">0.00</span></p> <!-- Linha da taxa de entrega -->
                         <p class="font-bold">Total: <span id="cart-total">0.00</span></p> <!-- Total geral -->
 
-                        
-                         <p>Preencha os seus dados para finalizar a sua entrega</p>   
+                        <div>
+                         
+                         <button class="tab-btn mt-4 hover:border-black" data-tab="info-tab">Endereço para entrega</button> 
+                        </div>
+
+                        <div class="flex items-center justify-between mt-5 w-full">
+                            <button id="close-modal-btn-pedido">Sair</button>                  
+                        </div>
 
                         </div>                   
                        
                     
                     <div class="tab-content hidden" id="payment-tab">
                                                                                        
-                           Formas de Pagamento:
+                          
+                           <h2 class="text-center font-bold text-1xl mb-2 mt-4"> Formas de Pagamento</h2>     
                             <ul>
                                 <li>Cartão de crédito</li>
                                 <li>Cartão de débito</li>
                                 <li>Pix</li>
                                 <li>Dinhero (no recebimento em dinheiro, informe com antecedência a solicitação do troco para ir junto com o pedito)</li>   
-                            </ul>                                      
+                            </ul> 
+
+                            <div class="flex items-center justify-between mt-5 w-full">
+                                <button id="close-modal-btn-endereco">Sair</button>                  
+                            </div>                                     
                     </div>                  
                               
                     <div class="tab-content hidden" id="info-tab">

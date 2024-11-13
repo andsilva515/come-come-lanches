@@ -4,7 +4,11 @@ const cartModal = document.getElementById("cart-modal")
 const cartItemsContainer = document.getElementById("cart-items")
 const cartTotal = document.getElementById("cart-total")
 const checkoutBtn = document.getElementById("checkout-btn")
+
 const closeModalBtn = document.getElementById("close-modal-btn")
+const closeModalBtnPedido = document.getElementById("close-modal-btn-pedido")
+const closeModalBtnEndereco = document.getElementById("close-modal-btn-endereco")
+
 const cartCounter = document.getElementById("cart-count")
 const addressInput = document.getElementById("address")
 const addressWarn = document.getElementById("address-warn")
@@ -24,7 +28,7 @@ cartModal.addEventListener("click", function(event){
     }
 })
 
-// Fechar o modal pelo botão fechar
+// Fechar o modal pelo botão sair
 closeModalBtn.addEventListener("click", function(){
     cartModal.style.display = "none"
 })
