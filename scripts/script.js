@@ -172,6 +172,9 @@ checkoutBtn.addEventListener("click", function(){
 
     window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank" )
 
+    cart = [];
+    updateCartModal();
+
 })
 
 
