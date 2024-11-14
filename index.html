@@ -169,69 +169,28 @@
             <!--FIM MENU-->           
             
             <!--INÍCIO MODAL CART-->
-
             <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
                 <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
-                    
-                  <!-- Menu de Navegação -->
-                    <div class="flex justify-around border-b mb-4">
-                        <button class="tab-btn text-lg pb-2 border-b-2 border-transparent hover:border-black" data-tab="order-tab">Pedido</button>
-                        <button class="tab-btn text-lg pb-2 border-b-2 border-transparent hover:border-black" data-tab="payment-tab">Formas de Pagamento</button>
-                        <button class="tab-btn text-lg pb-2 border-b-2 border-transparent hover:border-black" data-tab="info-tab">Endereço para Entrega</button>
-                    </div>                                    
-                                    
-                 <!-- Conteúdo das Abas -->                    
-                        <div class="tab-content hidden" id="order-tab">                                            
-                         <h2 class="text-center font-bold text-1xl mb-2 mt-4">Meu carrinho</h2>                                                       
-                        <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>                      
-                        <p class="font-bold">Taxa de Entrega: <span id="delivery-fee">0.00</span></p> <!-- Linha da taxa de entrega -->
-                        <p class="font-bold">Total: <span id="cart-total">0.00</span></p> <!-- Total geral -->
+                <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
 
-                        <div>                        
-                         <button class="tab-btn mt-4 hover:border-black" data-tab="info-tab">Endereço para entrega</button> 
-                        </div>
-                        <div class="flex items-center justify-between mt-5 w-full">
-                                            
-                        </div>
-                        </div>                                      
-                    
-                    <div class="tab-content hidden" id="payment-tab">                                                                                      
-                        <h2 class="text-center font-bold text-1xl mb-2 mt-4"> Formas de Pagamento</h2>     
-                            <ul>
-                                <li>Cartão de crédito</li>
-                                <li>Cartão de débito</li>
-                                <li>Pix</li>
-                                <li>Dinhero (no recebimento em dinheiro, informe com antecedência a solicitação do troco para ir junto com o pedito)</li>   
-                            </ul> 
+                <div id="cart-items" class="flex justify-between mb-2 flex-col"></div> <!-- Itens do Carrinho-->
 
-                        <div class="flex items-center justify-between mt-5 w-full">
-                                            
-                        </div>                                     
-                    </div>                  
-                              
-                    <div class="tab-content hidden" id="info-tab">           
-                        <p class="font-bold mt-4 ">Preencha o formulário abaixo para finalizar sua entrega:</p>                     
-                        <p class="mt-4">Nome:</p>
-                        <input type="text" id="recipient" placeholder="Nome do destinatário para a entrega do pedido." class="w-full border-2 p-2 rounded my-1"/>    
-                        <p class="mt-4">Endereço para entrega:</p>
-                        <input type="text" id="street" placeholder="Nome da rua/Avenida ou Rodovia." class="w-full border-2 p-2 rounded my-1"/>    
-                        <p class="mt-4">Número:</p>
-                        <input type="text" id="number" placeholder="Número da casa" class="w-full border-2 p-2 rounded my-1"/>    
-                        <p class="mt-4">Bairro:</p>
-                        <input type="text" id="neighborhood" placeholder="Nome do Bairro." class="w-full border-2 p-2 rounded my-1"/>    
-                        <p class="mt-4">Cidade:</p>
-                        <input type="text" id="city" placeholder="Nome da Cidade." class="w-full border-2 p-2 rounded my-1"/>    
-                        <p class="mt-4">Ponto de Referência:</p>
-                        <textarea id="reference" placeholder="Ponto de referência para ajudar o motoboy a chegar mais rápido." class="w-full border-2 p-2 rounded my-1"></textarea>
-                        <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>    
-                        <div class="flex items-center justify-between mt-5 w-full">
-                         <button id="close-modal-btn">Sair</button>
-                         <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
-                        </div>
-                    </div>                        
-                </div>  
+                <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+                <p class="font-bold mt-4">Endereço de entrega</p>
+                <input type="text" placeholder="Digite seu endereço completo..." id="adress" class="w-full border-2 p-1 rounded my-1"/>
+                    
+                <p class="text-red-500 hidden" id="address-warn">Digite seu endereo completo!</p>
+
+                <div class="flex items-center justify-between mt-5 w-full">
+                    <button id="close-modal-btn">Fechar</button>
+                    <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
+                </div>
+
+                </div>
+
             </div>
-            <!--FIM MODAL CART-->                                                 
+            <!--FIM MODAL CART -->                                                 
 
             <!--INÍCIO BUTTON CART FOOTER-->
                 <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">

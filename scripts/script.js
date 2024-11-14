@@ -60,49 +60,47 @@ function addtoCart(name, price){
     updateCartModal()
 }
 
+
 //Atualiza o carrinho
-function updateCartModal() {
+function updateCartModal(){
     cartItemsContainer.innerHTML = "";
-    const deliveryFee = 5.00; // Taxa de entrega fixa
     let total = 0;
 
     cart.forEach(item => {
         const cartItemElement = document.createElement("div");
-        cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col");
+        cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col")
 
         cartItemElement.innerHTML = `
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="font-medium">${item.name}</p>
-                    <p>Quantidade: ${item.quantity}</p>
-                    <p class="font-medium mt-2">Valor: R$ ${item.price.toFixed(2)}</p>
-                </div>                
+        <div class="flex items-center justify-between">
+            <div>
+                <p class="font-medium">${item.name}</p>
+                <p>Qtd: ${item.quantity}</p>
+                <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
+            </div>
+
+            
                 <button class="remove-from-cart-btn" data-name="${item.name}">
                     Remover
-                </button>               
-            </div>
-        `;
-        
-        total += item.price * item.quantity; // Soma o valor total dos itens
-        cartItemsContainer.appendChild(cartItemElement);
+                </button>
+            
+
+        </div>        
+       `;
+
+        total += item.price * item.quantity;
+       cartItemsContainer.appendChild(cartItemElement);
+
     });
 
-    // Exibe a taxa de entrega separadamente
-    document.getElementById("delivery-fee").textContent = deliveryFee.toLocaleString("pt-BR", {
-        style: "currency",
-        currency: "BRL"
-    });
 
-    // Calcula e exibe o total com a taxa de entrega
-    const totalWithDelivery = total + deliveryFee;
-    document.getElementById("cart-total").textContent = totalWithDelivery.toLocaleString("pt-BR", {
+    cartTotal.textContent = total.toLocaleString("pt-BR", {
         style: "currency",
         currency: "BRL"
     });
 
     cartCounter.innerHTML = cart.length;
-}
 
+}
 
 // Função para remover o item do carrinho
 cartItemsContainer.addEventListener("click", function (event){
