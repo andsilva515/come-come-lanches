@@ -29,6 +29,7 @@ closeModalBtn.addEventListener("click", function(){
     cartModal.style.display = "none"
 })
 
+// Botão adicionar pedido no carrinho
 menu.addEventListener("click", function(event){
     
     let parentButton = event.target.closest(".add-to-cart-btn")
@@ -128,61 +129,27 @@ function removeItemCart(name){
     }
 }
 
-// Valida todos os campos do endereço
-document.getElementById("checkout-btn").addEventListener("click", function(event) {
-    const requiredFields = ["recipient", "street", "number", "neighborhood", "city", "reference"];
-    let allValid = true;
+// Valida campo endereço
+addressInput.addEventListener("input", function(event){
+    let inputValue = event.target.value;
 
-    requiredFields.forEach(fieldId => {
-        const input = document.getElementById(fieldId);
-        if (input.value.trim() === "") {
-            input.classList.add("border-red-500");
-            allValid = false;
-        } else {
-            input.classList.remove("border-red-500");
-        }
-    });
-
-    const addressWarn = document.getElementById("address-warn");
-    if (!allValid) {
-        addressWarn.classList.remove("hidden");
-    } else {
-        addressWarn.classList.add("hidden");
-        // Lógica de envio do pedido aqui
-        alert("Pedido enviado com sucesso!!");
+    if(inputValue !== ""){
+        addressInput.classList.remove("border-red-500")
+        addressWarn.classList.add("hidden")
     }
 
-    // Impede o envio se houver campos inválidos
-    event.preventDefault();
-    });
+})
 
-// Finaliza pedido
-checkoutBtn.addEventListener("click", function(){  
-    
-    // verifica lanchonete fechada
-    // const isOpen = checkRestaurantOpen();
-    //     if(!isOpen){
-    //     Toastify({
-    //         text: "Ops o restaurante está fechado!",
-    //         duration: 3000,
-    //         close: true,
-    //         gravity: "top", // `top` or `bottom`
-    //         position: "right", // `left`, `center` or `right`
-    //         stopOnFocus: true, // Prevents dismissing of toast en hover
-    //         style: {
-    //             background: "#ef4444",
-    //         },            
-    //     }).showToast();
-    //     return;
-    //  }
-
-    if(cart.length === 0) return;
+//Finalizar pedido
+checkoutBtn.addEventListener("click", function(){
+    if(cart.length === 0) return;    
     if(addressInput.value === ""){
         addressWarn.classList.remove("hidden")
-        addressInput.classList.add("border-red-500")
-        return;
-    }  
+        addressInput.classList.add("border-red-500")        
+    }     
+})  
 
+   /* 
     //Enviar o pedido para API WhatsApp
     const cartItems = cart.map((item) => {
         return(
@@ -200,6 +167,9 @@ checkoutBtn.addEventListener("click", function(){
 
 })
 
+*/
+
+/*
 
 // Verificar a hora e manipular o card do horário
 function checkRestaurantOpen(){
@@ -221,33 +191,5 @@ if(isOpen){
     spanItem.classList.add("bg-red-500")
 }
 
+*/
 
-// Menu Cart Abas
-document.addEventListener("DOMContentLoaded", function() {
-    const tabButtons = document.querySelectorAll(".tab-btn");
-    const tabContents = document.querySelectorAll(".tab-content");
-
-    tabButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const targetTab = button.getAttribute("data-tab");
-
-            // Esconder todo o conteúdo das abas
-            tabContents.forEach(content => content.classList.add("hidden"));
-
-            // Mostrar o conteúdo da aba selecionada
-            document.getElementById(targetTab).classList.remove("hidden");
-
-            // Alterar a borda ativa do botão
-            tabButtons.forEach(btn => btn.classList.remove("border-black"));
-            button.classList.add("border-black");
-        });
-    });
-
-    // Abrir o modal
-   // document.getElementById("cart-modal").classList.remove("hidden");
-
-    // Fechar o modal
-    document.getElementById("close-modal-btn").addEventListener("click", () => {
-        document.getElementById("cart-modal").classList.add("hidden");
-    });
-});
