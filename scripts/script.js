@@ -29,7 +29,7 @@ closeModalBtn.addEventListener("click", function(){
     cartModal.style.display = "none"
 })
 
-menu.addEventListener("click", function(){
+menu.addEventListener("click", function(event){
     
     let parentButton = event.target.closest(".add-to-cart-btn")
 
