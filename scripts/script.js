@@ -147,7 +147,7 @@ checkoutBtn.addEventListener("click", function(){
      const isOpen = checkRestaurantOpen();
      if(!isOpen){
      Toastify({
-         text: "Ops o restaurante está fechado!",
+         text: "Ops, a lanchonete está fechada!",
          duration: 3000,
          close: true,
          gravity: "top", // `top` or `bottom`
