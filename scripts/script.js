@@ -142,54 +142,55 @@ addressInput.addEventListener("input", function(event){
 
 //Finalizar pedido
 checkoutBtn.addEventListener("click", function(){
+
+    /*
+    // Verifica restaurante aberto ou fechado
+    const isOpen = checkRestaurantOpen();
+    if(!isOpen){
+        alert("Restaurante Fechado no Momento!")
+        return;
+    }
+    */
+
     if(cart.length === 0) return;    
     if(addressInput.value === ""){
         addressWarn.classList.remove("hidden")
-        addressInput.classList.add("border-red-500")        
+        addressInput.classList.add("border-red-500")
+        return;        
     }     
-})  
 
-   /* 
-    //Enviar o pedido para API WhatsApp
+
+    //Enviar o pedido para a api do WhatsApp
     const cartItems = cart.map((item) => {
-        return(
-            ` ${item.name} | Qtd: (${item.quantity}) | Preço: R$ ${item.price} |`   
-        )                 
+      return (  
+         ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`
+      )
     }).join("")
 
     const message = encodeURIComponent(cartItems)
-    const phone = "35998471037"
+    const phone = "35998832330" // tem que ser um telefone real
 
-    window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
-
-    cart = [];
-    updateCartModal();
+    window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank" )
 
 })
 
-*/
 
-/*
+    //verificar a hora e manipular o card do horário
+    function checkRestaurantOpen(){ 
+        const data = new Date();
+        const hora = data.getHours();
+        return hora >= 19 && hora < 23; 
+        //true = restaurante está aberto
+    }
 
-// Verificar a hora e manipular o card do horário
-function checkRestaurantOpen(){
-    const data = new Date();
-    const hora = data.getHours();
-    return hora >= 19 && hora < 23;
-    // true = restaurante está aberto
-}
+    const spanItem = document.getElementById("date-span")
+    const isOpen = checkRestaurantOpen();
 
-
-const spanItem = document.getElementById("date-span")
-const isOpen = checkRestaurantOpen();
-
-if(isOpen){
-    spanItem.classList.remove("bg-red-500");
-    spanItem.classList.add("bg-green-600")
-}else{
-    spanItem.classList.remove("bg-green-600")
-    spanItem.classList.add("bg-red-500")
-}
-
-*/
+    if(isOpen){
+        spanItem.classList.remove("bg-red-500");
+        spanItem.classList.add("bg-green-600")
+    }else{
+        spanItem.classList.remove("bg-green-600")
+        spanItem.classList.add("bg-red-500")
+    }
 
