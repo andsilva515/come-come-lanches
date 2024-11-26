@@ -4,7 +4,7 @@
 ![Versão](https://img.shields.io/badge/version-1.0.0-blue)
 ![Status](https://img.shields.io/badge/status-Em%20Desenvolvimento-yellow)
 
-Esta em fase de desenvolvimetno um sistema de cardápio digital. As principais funcionalidades será o gerenciamento de pedidos, a impressão automática de pedidos, integração com APIs de terceiros e suporte a múltiplocs usuários.
+Esta em fase de desenvolvimetno um sistema de cardápio digital. Que contém as funcionalidades de gerenciamento de pedidos, a impressão automática de pedidos, integração com APIs de terceiros e suporte a múltiplocs usuários.
 
 ---
 
@@ -26,7 +26,7 @@ Esta em fase de desenvolvimetno um sistema de cardápio digital. As principais f
 
 ### 📖 Descrição
 
-> Este projeto é um cardápio digital para delivery, que facilita o gerenciamento de pedidos e impressão automática para lanchonetes, bares, restaurantes, etc. Ele inclui integração com APIs e suporte para múltiplos usuários.
+> Este projeto é um cardápio digital para delivery, que facilita o gerenciamento de pedidos e a impressão automática. Para lanchonetes, bares, restaurantes, etc. Ele inclui integração com APIs e suporte para múltiplos usuários.
 
 ---
 
