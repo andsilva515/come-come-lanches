@@ -4,7 +4,7 @@
 ![Versão](https://img.shields.io/badge/version-1.0.0-blue)
 ![Status](https://img.shields.io/badge/status-Em%20Desenvolvimento-yellow)
 
-Esta em fase de desenvolvimetno um sistema de cardápio digital. Que contém as funcionalidades de gerenciamento de pedidos, a impressão automática de pedidos, integração com APIs de terceiros e suporte a múltiplocs usuários.
+Esta em fase de desenvolvimetno um sistema de cardápio digital. Que contém as funcionalidades de gerenciamento de pedidos, a impressão automática de pedidos, integração com APIs de terceiros e suporte a múltiplos usuários.
 
 ---
 
@@ -84,3 +84,4 @@ Esta em fase de desenvolvimetno um sistema de cardápio digital. Que contém as 
 ## Licença
 
 ## Contato
+
