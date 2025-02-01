@@ -249,7 +249,7 @@ const menuItems = [
       price: "35.00",
       imgSrc: "./assets/hamb-2.png",
     },
-
+   
   ];
   
   function generateMenu() {
