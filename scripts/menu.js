@@ -277,22 +277,3 @@ const menuItems = [
   
   document.addEventListener("DOMContentLoaded", generateMenu);
   
-
-`
-   
-            <!--INÍCIO PRODUTO ITEM BEBIDAS 1  -->
-            <div class="flex gap-2 w-full">
-                <img src="./assets/refri-1.png" alt="Coca lata"
-                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
-                <div class="w-full">
-                    <p class="font-bold">Coca lata</p>
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 5.00</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Coca lata"
-                            data-price="5.00">
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>            
-
-`
