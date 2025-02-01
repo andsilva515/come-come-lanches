@@ -41,7 +41,7 @@ const menuItems = [
 
   {
     name: "07 - Come-Come Bacon Egg",
-    description: "Pão, hamburguer, mussarela, bacon, alface, tomate, ovo, batata palha e molho especial",
+    description: "Pão, hamburguer, mussarela, bacon, alface, tomate, ovo, batata palha e molho especial.",
     price: "26.00",
     imgSrc: "./assets/hamb-7.png",
   },
@@ -55,7 +55,7 @@ const menuItems = [
 
   {
     name: "09 - Come-Come Calabresa",
-    description: "Pão, calabressa, mussarela, alface, tomate, batata palha e molho especial",
+    description: "Pão, calabressa, mussarela, alface, tomate, batata palha e molho especial.",
     price: "23.00",
     imgSrc: "./assets/hamb-2.png",
   },  
@@ -123,133 +123,132 @@ const menuItems = [
 
     {
       name: "19 - Come-Come Frango",
-      description: "",
+      description: "Pão, frango, mussarela, batata palha, e molho especial.",
       price: "25.00",
       imgSrc: "./assets/hamb-5.png",
     },
     {
       name: "20 - Come-Come Frango Bacon",
-      description: "",
+      description: "Pão, frango, mussarela, bacon, alface, tomate, batata palha, e molho especial.",
       price: "26.00",
       imgSrc: "./assets/hamb-6.png",
     },
     {
       name: "21 - Come-Come Frango c/ Maionese",
-      description: "",
+      description: "Pão, frango, mussarela, batata palha, e maionese.",
       price: "25.00",
       imgSrc: "./assets/hamb-7.png",
     },
     
     {
       name: "22 - Come-Come Frango Egg",
-      description: "",
+      description: "Pão, frango, mussarela, ovo, batata palha, e molho especial.",
       price: "26.00",
       imgSrc: "./assets/hamb-1.png",
     },
 
     {
       name: "23 - Come-Come Frango Salada",
-      description: "",
+      description: "Pão, frango, mussarela, alface, batata palha, e molho especial.",
       price: "26.00",
       imgSrc: "./assets/hamb-2.png",
     },
 
     {
       name: "24 - Come-Come Frango Salada Egg",
-      description: "",
+      description: "Pão, frango, mussarela, alface, tomate, ovo, batata palha, e molho especial.",
       price: "27.00",
       imgSrc: "./assets/hamb-3.png",
     },
 
     {
       name: "25 - Come-Come Frango Bacon Egg",
-      description: "",
+      description: "Pão, frango, mussarela, bacon, alface, tomate, batata palha, e molho especial.",
       price: "30.00",
       imgSrc: "./assets/hamb-4.png",
     },
 
     {
       name: "26 - Come-Come Tudo Especial",
-      description: "",
+      description: "Pão, frango, mussarela, batata palha, bacon, alface, tomate, ovo, milho, presunto, calabresa, e molho especial.",
       price: "30.00",
       imgSrc: "./assets/hamb-5.png",
     },
 
     {
       name: "27 - Come-Come Frango Catupyry",
-      description: "",
+      description: "Pão, frango, catupiry, milho, batata palha, e molho especial.",
       price: "30.00",
       imgSrc: "./assets/hamb-6.png",
     },
 
     {
       name: "28 - Come-Come Frango Banana",
-      description: "",
+      description: "Pão, frango, banana, milho, mussarela, batata palha, e molho especial.",
       price: "23.00",
       imgSrc: "./assets/hamb-7.png",
     },
     {
       name: "29 - Come-Come Filé Mignon Acebolado",
-      description: "",
+      description: "Pão, filé mignon, cebola, mussarela, tomate, batata palha, e molho especial.",
       price: "",
       imgSrc: "./assets/hamb-1.png",
     },
     {
       name: "30 - Come-Come Lombo Acebolado",
-      description: "",
+      description: "Pão, lombo, cebola, mussarela, tomate e molho especial.",
       price: "26.00",
       imgSrc: "./assets/hamb-2.png",
     },
     
     {
-      name: "31 - Come-Come c/ Abacaxi",
-      description: "",
+      name: "31 - Come-Come Lombo c/ Abacaxi",
+      description: "Pão, lombo, abacaxi, batata palha, e molho especial.",
       price: "28.00",
       imgSrc: "./assets/hamb-3.png",
     },
 
     {
       name: "32 - Come-Come Banana",
-      description: "",
+      description: "Pão, hambúrger, banana, milho, mussarela, batata palha, e molho especial.",
       price: "15.00",
       imgSrc: "./assets/hamb-4.png",
     },
 
     {
       name: "33 - Come-Come Banana c/ Queijo",
-      description: "",
+      description: "Pão, hambúrger, banana, mussarela, milho.",
       price: "17.00",
       imgSrc: "./assets/hamb-5.png",
     },
 
     {
       name: "34 - Come-Come Misto",
-      description: "",
+      description: "Pão, 2 presuntos, 2 mussarela e maionese.",
       price: "12.00",
       imgSrc: "./assets/hamb-6.png",
     },
 
     {
       name: "35 - Come-Come Chedda Burger",
-      description: "",
+      description: "Pão, maionese, hambúrger, cheddar, batata palha, e molho especial.",
       price: "18.00",
       imgSrc: "./assets/hamb-7.png",
     },
 
     {
-      name: "36 - Come-Come Especial",
-      description: "",
+      name: "36 - Come-Come Salada Especial",
+      description: "Pão, maionese, 2 hambúrger, salada, cheddar, batata palha, e molho especial.",
       price: "25.00",
       imgSrc: "./assets/hamb-1.png",
     }, 
 
     {
       name: "37 - Come-Come",
-      description: "",
+      description: "Pão, frango, 2 presuntos, 2 alface, 2 tomate, 2 bacon, 2 calebresa, 2 mussarela, 2 milhos, 2 ovos, hambúrger, batata palha e molho especial.",
       price: "35.00",
       imgSrc: "./assets/hamb-2.png",
     },
-
 
   ];
   
@@ -257,11 +256,11 @@ const menuItems = [
     const menuContainer = document.querySelector("#menu main");
     menuItems.forEach(item => {
       const itemHTML = `
-        <div class="flex gap-2">
+        <div class="flex gap-2 w-full"> 
           <img src="${item.imgSrc}" alt="${item.name}" 
             class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
-          <div>
-            <p class="font-bold">${item.name}</p>
+          <div class="w-full">             
+            <p class="font-bold ">${item.name}</p>
             <p class="text-sm">${item.description}</p>
             <div class="flex items-center gap-2 justify-between mt-3">
               <p class="font-bold text-lg">R$ ${item.price}</p>
@@ -278,3 +277,22 @@ const menuItems = [
   
   document.addEventListener("DOMContentLoaded", generateMenu);
   
+
+`
+   
+            <!--INÍCIO PRODUTO ITEM BEBIDAS 1  -->
+            <div class="flex gap-2 w-full">
+                <img src="./assets/refri-1.png" alt="Coca lata"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+                <div class="w-full">
+                    <p class="font-bold">Coca lata</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 5.00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Coca lata"
+                            data-price="5.00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>            
+
+`
