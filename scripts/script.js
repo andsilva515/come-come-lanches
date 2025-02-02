@@ -12,29 +12,29 @@ const addressWarn = document.getElementById("address-warn")
 let cart = [];
 
 // Abrir o modal do carrinho
-cartBtn.addEventListener("click", function(){
+cartBtn.addEventListener("click", function () {
     updateCartModal();
     cartModal.style.display = "flex"
 })
 
 // Fechar o modal quando clicar fora
-cartModal.addEventListener("click", function(event){
-    if(event.target === cartModal){
+cartModal.addEventListener("click", function (event) {
+    if (event.target === cartModal) {
         cartModal.style.display = "none"
     }
 })
 
 // Fechar o modal pelo botão sair
-closeModalBtn.addEventListener("click", function(){
+closeModalBtn.addEventListener("click", function () {
     cartModal.style.display = "none"
 })
 
 // Botão adicionar pedido no carrinho
-menu.addEventListener("click", function(event){
-    
+menu.addEventListener("click", function (event) {
+
     let parentButton = event.target.closest(".add-to-cart-btn")
 
-    if(parentButton){
+    if (parentButton) {
         const name = parentButton.getAttribute("data-name")
         const price = parseFloat(parentButton.getAttribute("data-price"))
 
@@ -43,18 +43,18 @@ menu.addEventListener("click", function(event){
 })
 
 // Função para adicionar no carrinho
-function addtoCart(name, price){
+function addtoCart(name, price) {
     const existingItem = cart.find(item => item.name === name)
 
-    if(existingItem){
+    if (existingItem) {
         //Se o item já existe, aumenta apenas a quantidade + 1
         existingItem.quantity += 1;
-    }else{
-       cart.push({
-         name,
-         price,
-         quantity: 1,
-    })      
+    } else {
+        cart.push({
+            name,
+            price,
+            quantity: 1,
+        })
 
     }
 
@@ -63,7 +63,7 @@ function addtoCart(name, price){
 
 
 //Atualiza o carrinho
-function updateCartModal(){
+function updateCartModal() {
     cartItemsContainer.innerHTML = "";
     let total = 0;
 
@@ -89,7 +89,7 @@ function updateCartModal(){
        `;
 
         total += item.price * item.quantity;
-       cartItemsContainer.appendChild(cartItemElement);
+        cartItemsContainer.appendChild(cartItemElement);
 
     });
 
@@ -104,21 +104,21 @@ function updateCartModal(){
 }
 
 // Função para remover o item do carrinho
-cartItemsContainer.addEventListener("click", function (event){
-    if(event.target.classList.contains("remove-from-cart-btn")){
+cartItemsContainer.addEventListener("click", function (event) {
+    if (event.target.classList.contains("remove-from-cart-btn")) {
         const name = event.target.getAttribute("data-name")
 
         removeItemCart(name);
     }
 })
 
-function removeItemCart(name){
+function removeItemCart(name) {
     const index = cart.findIndex(item => item.name === name);
 
-    if(index !== -1){
+    if (index !== -1) {
         const item = cart[index];
 
-        if(item.quantity > 1){
+        if (item.quantity > 1) {
             item.quantity -= 1;
             updateCartModal();
             return;
@@ -129,79 +129,78 @@ function removeItemCart(name){
     }
 }
 
-// Valida campo endereço
-addressInput.addEventListener("input", function(event){
-    let inputValue = event.target.value;
+//Finalizar pedido
+checkoutBtn.addEventListener("click", function () {
 
-    if(inputValue !== ""){
-        addressInput.classList.remove("border-red-500")
-        addressWarn.classList.add("hidden")
+    // verifica lanchonete fechada
+    const isOpen = checkRestaurantOpen();
+    if (!isOpen) {
+        Toastify({
+            text: "Ops, a lanchonete está fechada!",
+            duration: 3000,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast en hover
+            style: {
+                background: "#ef4444",
+            },
+        }).showToast();
+        return;
     }
 
-})
-
-//Finalizar pedido
-checkoutBtn.addEventListener("click", function(){
-
-     // verifica lanchonete fechada
-     const isOpen = checkRestaurantOpen();
-     if(!isOpen){
-     Toastify({
-         text: "Ops, a lanchonete está fechada!",
-         duration: 3000,
-         close: true,
-         gravity: "top", // `top` or `bottom`
-         position: "right", // `left`, `center` or `right`
-         stopOnFocus: true, // Prevents dismissing of toast en hover
-         style: {
-             background: "#ef4444",
-         },            
-     }).showToast();
-     return;
-  }
-
-    if(cart.length === 0) return;    
-    if(addressInput.value === ""){
+    if (cart.length === 0) return;
+    if (addressInput.value === "") {
         addressWarn.classList.remove("hidden")
         addressInput.classList.add("border-red-500")
-        return;        
-    }     
+        return;
+    }
 
 
     //Enviar o pedido para a api do WhatsApp
     const cartItems = cart.map((item) => {
-      return (  
-         ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`
-      )
+        return (
+            ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`
+        )
     }).join("")
 
     const message = encodeURIComponent(cartItems)
     const phone = "35998471037" // tem que ser um telefone real
 
-    window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank" )
+    window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
 
     cart = [];
     updateCartModal();
 
 })
 
+// Valida campo endereço
+addressInput.addEventListener("input", function (event) {
+    let inputValue = event.target.value;
 
-    //verificar a hora e manipular o card do horário
-    function checkRestaurantOpen(){ 
-        const data = new Date();
-        const hora = data.getHours();
-        return hora >= 19 && hora < 23; 
-        //true = restaurante está aberto
+    if (inputValue !== "") {
+        addressInput.classList.remove("border-red-500")
+        addressWarn.classList.add("hidden")
     }
 
-    const spanItem = document.getElementById("date-span")
-    const isOpen = checkRestaurantOpen();
+})
 
-    if(isOpen){
-        spanItem.classList.remove("bg-red-500");
-        spanItem.classList.add("bg-green-600")
-    }else{
-        spanItem.classList.remove("bg-green-600")
-        spanItem.classList.add("bg-red-500")
-    }
+//verificar a hora e manipular o card do horário
+function checkRestaurantOpen() {
+    const data = new Date();
+    const hora = data.getHours();
+    return hora >= 19 && hora < 23;
+    //true = restaurante está aberto
+}
+
+const spanItem = document.getElementById("date-span")
+const isOpen = checkRestaurantOpen();
+
+if (isOpen) {
+    spanItem.classList.remove("bg-red-500");
+    spanItem.classList.add("bg-green-600")
+} else {
+    spanItem.classList.remove("bg-green-600")
+    spanItem.classList.add("bg-red-500")
+}
 
