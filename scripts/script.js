@@ -164,8 +164,12 @@ checkoutBtn.addEventListener("click", function () {
         )
     }).join("")
 
-    const message = encodeURIComponent(cartItems)
-    const phone = "35998471037" // tem que ser um telefone real
+     // Formato mensagem WhatsApp
+     const message = encodeURIComponent(cart.map(item =>
+        `🍔 ${item.name}\n🔢 Quantidade: ${item.quantity}\n💰 Preço: R$${item.price.toFixed(2)}\n`
+    ).join("\n")) + `%0A📍 Endereço: ${addressInput.value}`;
+
+    const phone = "35998832330" // tem que ser um telefone real
 
     window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
 
