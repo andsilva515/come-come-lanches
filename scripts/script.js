@@ -193,7 +193,7 @@ addressInput.addEventListener("input", function (event) {
 function checkRestaurantOpen() {
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 19 && hora < 23;
+    return hora >= 14 && hora < 23;
     //true = restaurante está aberto
 }
 
