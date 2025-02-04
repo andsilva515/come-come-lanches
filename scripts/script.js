@@ -167,7 +167,7 @@ checkoutBtn.addEventListener("click", function () {
      // Formato mensagem WhatsApp
      const message = encodeURIComponent(cart.map(item =>
         `🍔 ${item.name}\n🔢 Quantidade: ${item.quantity}\n💰 Preço: R$${item.price.toFixed(2)}\n`
-    ).join("\n")) + `%0A📍 Endereço:\n ${addressInput.value}`;
+    ).join("\n")) + `%0A📍 Endereço: ${addressInput.value}`;
 
     const phone = "35998832330" // tem que ser um telefone real
 
@@ -193,7 +193,7 @@ addressInput.addEventListener("input", function (event) {
 function checkRestaurantOpen() {
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 14 && hora < 23;
+    return hora >= 19 && hora < 23;
     //true = restaurante está aberto
 }
 
