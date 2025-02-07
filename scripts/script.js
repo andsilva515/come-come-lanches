@@ -171,7 +171,7 @@ checkoutBtn.addEventListener("click", function () {
 
     const phone = "35998832330" // tem que ser um telefone real
 
-    window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
+    window.open(`https://wa.me/${phone}?text=${message} `, "_blank")
 
     cart = [];
     updateCartModal();
