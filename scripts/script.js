@@ -157,26 +157,43 @@ checkoutBtn.addEventListener("click", function () {
     }
 
 
-    //Enviar o pedido para a api do WhatsApp
+    // Monta os itens do pedido
     const cartItems = cart.map((item) => {
         return (
-            ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`
+            `🍔 ${item.name} - 🔢 ${item.quantity}x - 💰 R$${item.price.toFixed(2)}`
         )
-    }).join("")
+    }).join("\n")
 
-     // Formato mensagem WhatsApp
-     const message = encodeURIComponent(cart.map(item =>
-        `🍔 ${item.name}\n🔢 Quantidade: ${item.quantity}\n💰 Preço: R$${item.price.toFixed(2)}\n`
-    ).join("\n")) + `%0A📍 Endereço: ${addressInput.value}`;
+    // Formato mensagem WhatsApp
+    // const message = encodeURIComponent(cartItems + `\n📍 Endereço: ${addressInput.value}`);
+    // const phone = "35998832330"; // Número real do WhatsApp
+    // window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 
-    const phone = "35998832330" // tem que ser um telefone real
+    // Enviar o pedido para impressão
+    const pedidoElement = document.createElement("div");
+    pedidoElement.innerHTML = `
+    <h2>📜 Pedido</h2>
+    <p>${cartItems.replace(/\n/g, "<br>")}</p>
+    <p><strong>📍 Endereço:</strong> ${addressInput.value}</p>
+`;
 
-    window.open(`https://wa.me/${phone}?text=${message} `, "_blank")
+    document.body.appendChild(pedidoElement); // Adiciona temporariamente para gerar PDF
 
-    cart = [];
-    updateCartModal();
 
-})
+    // Salva pedido em pdf
+    // html2pdf().from(pedidoElement).save().then(() => {
+    //     document.body.removeChild(pedidoElement); // Remove após gerar o PDF
+
+
+    html2pdf().from(pedidoElement).toPdf().get('pdf').then(pdf => {
+        pdf.autoPrint();
+        window.open(pdf.output('bloburl'), '_blank');
+
+        // Limpa o carrinho depois da impressão
+        cart = [];
+        updateCartModal();
+    });
+});
 
 // Valida campo endereço
 addressInput.addEventListener("input", function (event) {
