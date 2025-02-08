@@ -38,9 +38,9 @@ Esta em fase de desenvolvimetno um sistema de cardápio digital. Que contém as 
 - [ ] Notificar sobre novos pedidos.
 - [ ] Taxa de entrega no final do pedido
 - [ ] Endereço completo
-- [ ] Adicionar e remover itens do produtos
-- [ ] Qrcode do cardapio
-- [ ] Painel de Gestão
+- [ ] Adicionar e remover itens dos produtos
+- [ ] Qr code do cardápio
+- [ ] Painel de gestão
 
 ---
 
