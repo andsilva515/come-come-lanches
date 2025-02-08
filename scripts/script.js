@@ -176,23 +176,30 @@ checkoutBtn.addEventListener("click", function () {
     <p>${cartItems.replace(/\n/g, "<br>")}</p>
     <p><strong>📍 Endereço:</strong> ${addressInput.value}</p>
 `;
-
-    document.body.appendChild(pedidoElement); // Adiciona temporariamente para gerar PDF
-
-
+ 
     // Salva pedido em pdf
+    // document.body.appendChild(pedidoElement); // Adiciona temporariamente para gerar PDF   
     // html2pdf().from(pedidoElement).save().then(() => {
     //     document.body.removeChild(pedidoElement); // Remove após gerar o PDF
 
 
-    html2pdf().from(pedidoElement).toPdf().get('pdf').then(pdf => {
-        pdf.autoPrint();
-        window.open(pdf.output('bloburl'), '_blank');
+    document.body.appendChild(pedidoElement); // Adiciona temporariamente ao DOM
 
-        // Limpa o carrinho depois da impressão
-        cart = [];
-        updateCartModal();
-    });
+    // Aguarda um pequeno intervalo antes de imprimir
+    setTimeout(() => {
+        html2pdf().from(pedidoElement).toPdf().get('pdf').then(pdf => {
+            pdf.autoPrint();
+            window.open(pdf.output('bloburl'), '_blank');
+
+            // Limpa o carrinho depois da impressão
+            cart = [];
+            updateCartModal();
+
+            // Remove o elemento temporário após a impressão
+            document.body.removeChild(pedidoElement);
+        });
+    }, 500); // Aguarda 500ms para garantir a renderização
+  
 });
 
 // Valida campo endereço
