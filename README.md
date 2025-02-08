@@ -34,8 +34,13 @@ Esta em fase de desenvolvimetno um sistema de cardápio digital. Que contém as 
 
 - [x] Adicionar produtos ao carrinho.
 - [x] Capturar endereço do cliente.
-- [ ] Enviar pedidos diretamente para impressão.
+- [x] Enviar pedidos diretamente para impressão.
 - [ ] Notificar sobre novos pedidos.
+- [ ] Taxa de entrega no final do pedido
+- [ ] Endereço completo
+- [ ] Adicionar e remover itens do produtos
+- [ ] Qrcode do cardapio
+- [ ] Painel de Gestão
 
 ---
 
