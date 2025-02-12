@@ -63,13 +63,17 @@ function addtoCart(name, price) {
 
 
 //Atualiza o carrinho
+
+// Atualiza o carrinho
 function updateCartModal() {
     cartItemsContainer.innerHTML = "";
+
     let total = 0;
+    const deliveryFee = 5.00; // Taxa de entrega fixa
 
     cart.forEach(item => {
         const cartItemElement = document.createElement("div");
-        cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col")
+        cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col");
 
         cartItemElement.innerHTML = `
         <div class="flex items-center justify-between">
@@ -78,30 +82,41 @@ function updateCartModal() {
                 <p>Qtd: ${item.quantity}</p>
                 <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
             </div>
-
             
-                <button class="remove-from-cart-btn" data-name="${item.name}">
-                    Remover
-                </button>
-            
-
+            <button class="remove-from-cart-btn" data-name="${item.name}">
+                Remover
+            </button>
         </div>        
        `;
 
         total += item.price * item.quantity;
         cartItemsContainer.appendChild(cartItemElement);
-
     });
 
+    // Calcula o total final somando a taxa de entrega
+    const finalTotal = total + deliveryFee;
 
-    cartTotal.textContent = total.toLocaleString("pt-BR", {
+    // Atualiza os valores no HTML
+    document.getElementById("cart-subtotal").textContent = total.toLocaleString("pt-BR", {
         style: "currency",
         currency: "BRL"
     });
 
-    cartCounter.innerHTML = cart.length;
+    document.getElementById("cart-delivery").textContent = deliveryFee.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    });
 
+    document.getElementById("cart-total").textContent = finalTotal.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    });
+
+    // Atualiza o contador de itens no carrinho
+    cartCounter.innerHTML = cart.length;
 }
+
+
 
 // Função para remover o item do carrinho
 cartItemsContainer.addEventListener("click", function (event) {
