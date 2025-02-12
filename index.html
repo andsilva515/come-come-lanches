@@ -323,22 +323,21 @@
 
     <!--INÍCIO MODAL CART-->
     <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
+        
         <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
 
             <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
 
             <hr>
             <!-- Inicio do Pedido -->
-               <div id="cart-items" class="flex justify-between mb-2 flex-col"></div> <!-- Itens do Carrinho-->
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div> <!-- Itens do Carrinho-->
                <p class="font-bold">Pedido: <span id="cart-subtotal">R$ 0.00</span></p>
                <p class="font-bold">Taxa de Entrega: <span id="cart-delivery">R$ 5.00</span></p>
-               <p class="font-bold">Total do Pedido: <span id="cart-total">R$ 0.00</span></p>
-            <br>
+               <p class="font-bold">Total do Pedido: <span id="cart-total">R$ 0.00</span></p>           
             <hr>
             <!-- Fim do Pedido -->
 
             <!-- Inicio Novo Endereço -->
-
             <p class="font-bold mt-4">Nome:</p>
             <input type="text" placeholder="" id="address" class="w-full border-2 p-1 rounded my-1" />
 
@@ -356,12 +355,7 @@
 
             <p class="font-bold mt-4">Ponto de Referência:</p>
             <textarea type="text" placeholder="" id="address" class="w-full border-2 p-1 rounded my-1"></textarea>
-
-            <!-- Fim Novo Endereço -->
-
-            <!-- <p class="font-bold mt-4">Endereço de entrega</p>
-            <input type="text" placeholder="Digite seu endereço completo..." id="address"
-                class="w-full border-2 p-1 rounded my-1" /> -->
+            <!-- Fim Novo Endereço --> 
 
             <p class="text-red-500 hidden" id="address-warn">Digite seu endereo completo!</p>
 
@@ -371,7 +365,6 @@
             </div>
 
         </div>
-
     </div>
     <!--FIM MODAL CART -->
 
