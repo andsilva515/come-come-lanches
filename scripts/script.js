@@ -61,9 +61,6 @@ function addtoCart(name, price) {
     updateCartModal()
 }
 
-
-//Atualiza o carrinho
-
 // Atualiza o carrinho
 function updateCartModal() {
     cartItemsContainer.innerHTML = "";
@@ -115,8 +112,6 @@ function updateCartModal() {
     // Atualiza o contador de itens no carrinho
     cartCounter.innerHTML = cart.length;
 }
-
-
 
 // Função para remover o item do carrinho
 cartItemsContainer.addEventListener("click", function (event) {
@@ -171,18 +166,12 @@ checkoutBtn.addEventListener("click", function () {
         return;
     }
 
-
     // Monta os itens do pedido
     const cartItems = cart.map((item) => {
         return (
             `🍔 ${item.name} - 🔢 ${item.quantity}x - 💰 R$${item.price.toFixed(2)}`
         )
     }).join("\n")
-
-    // Formato mensagem WhatsApp
-    // const message = encodeURIComponent(cartItems + `\n📍 Endereço: ${addressInput.value}`);
-    // const phone = "35998471037"; // Número real do WhatsApp
-    // window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 
     // Enviar o pedido para impressão
     const pedidoElement = document.createElement("div");
@@ -191,12 +180,6 @@ checkoutBtn.addEventListener("click", function () {
     <p>${cartItems.replace(/\n/g, "<br>")}</p>
     <p><strong>📍 Endereço:</strong> ${addressInput.value}</p>
 `;
- 
-    // Salva pedido em pdf
-    // document.body.appendChild(pedidoElement); // Adiciona temporariamente para gerar PDF   
-    // html2pdf().from(pedidoElement).save().then(() => {
-    //     document.body.removeChild(pedidoElement); // Remove após gerar o PDF
-
 
     document.body.appendChild(pedidoElement); // Adiciona temporariamente ao DOM
 
