@@ -201,15 +201,38 @@ checkoutBtn.addEventListener("click", function () {
 });
 
 // Valida campo endereço
-addressInput.addEventListener("input", function (event) {
-    let inputValue = event.target.value;
+document.addEventListener("DOMContentLoaded", function () {
+    const fields = ["name", "street", "number", "neighborhood", "city", "reference"];
+    const addressWarn = document.getElementById("address-warn");
+    const checkoutBtn = document.getElementById("checkout-btn");
 
-    if (inputValue !== "") {
-        addressInput.classList.remove("border-red-500")
-        addressWarn.classList.add("hidden")
-    }
+    // Adiciona evento de input para remover erro ao digitar
+    fields.forEach(field => {
+        document.getElementById(field).addEventListener("input", function () {
+            this.classList.remove("border-red-500");
+            addressWarn.classList.add("hidden");
+        });
+    });
 
-})
+    // Evento de clique no botão de finalização
+    checkoutBtn.addEventListener("click", function () {
+        let isValid = true;
+
+        fields.forEach(field => {
+            const input = document.getElementById(field);
+            if (input.value.trim() === "") {
+                input.classList.add("border-red-500");
+                isValid = false;
+            }
+        });
+
+        if (!isValid) {
+            addressWarn.classList.remove("hidden");
+        } else {
+            alert("Pedido finalizado com sucesso!");
+        }
+    });
+});
 
 //verificar a hora e manipular o card do horário
 function checkRestaurantOpen() {
