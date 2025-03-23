@@ -167,17 +167,17 @@ checkoutBtn.addEventListener("click", function(){
         return;
     }  
 
-    //Enviar o pedido para API WhatsApp
+    //Enviar o pedido para API WhatsApp    
     const cartItems = cart.map((item) => {
-        return(
-            ` ${item.name} | Qtd: (${item.quantity}) | Preço: R$ ${item.price} |`   
-        )                 
-    }).join("")
+        return (
+            `🍔 ${item.name} - 🔢 ${item.quantity}x - 💰 R$${item.price.toFixed(2)}`
+        )
+    }).join("\n")
 
-    const message = encodeURIComponent(cartItems)
-    const phone = "35998832330"
-
-    window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
+    // Formato mensagem WhatsApp
+    const message = encodeURIComponent(cartItems + `\n 📍 Endereço: ${addressInput.value}`);
+    const phone = "35998832330"; // Número real do WhatsApp
+    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 
     cart = [];
     updateCartModal();
