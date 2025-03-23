@@ -176,7 +176,7 @@ checkoutBtn.addEventListener("click", function(){
 
     // Formato mensagem WhatsApp
     const message = encodeURIComponent(cartItems + `\n 📍 Endereço: ${addressInput.value}`);
-    const phone = "35998832330"; // Número real do WhatsApp
+    const phone = "35998471037"; // Número real do WhatsApp
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 
     cart = [];
@@ -189,7 +189,7 @@ checkoutBtn.addEventListener("click", function(){
 function checkRestaurantOpen(){
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 14 && hora < 23;
+    return hora >= 19 && hora < 23;
     // true = restaurante está aberto
 }
 
