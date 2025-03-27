@@ -187,8 +187,8 @@ checkoutBtn.addEventListener("click", function(){
 
     // Formato mensagem WhatsApp
     const message = encodeURIComponent(cartItems + `\n 📍 Endereço: ${addressInput.value}`);
-    //const phone = "35998471037"; // Número real do WhatsApp
-    const phone = "35998832330"; // Número real do WhatsApp
+    const phone = "35998471037"; // Número real do WhatsApp
+    // const phone = "35998832330"; // Número real do WhatsApp
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 
     cart = [];
