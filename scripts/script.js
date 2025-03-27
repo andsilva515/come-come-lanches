@@ -61,14 +61,16 @@ function addtoCart(name, price){
     updateCartModal()
 }
 
-//Atualiza o carrinho
-function updateCartModal(){
+// Atualiza o carrinho
+function updateCartModal() {
     cartItemsContainer.innerHTML = "";
+
     let total = 0;
+    const deliveryFee = 5.00; // Taxa de entrega fixa
 
     cart.forEach(item => {
         const cartItemElement = document.createElement("div");
-        cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col")
+        cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col");
 
         cartItemElement.innerHTML = `
         <div class="flex items-center justify-between">
@@ -77,29 +79,38 @@ function updateCartModal(){
                 <p>Qtd: ${item.quantity}</p>
                 <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
             </div>
-
             
-                <button class="remove-from-cart-btn" data-name="${item.name}">
-                    Remover
-                </button>
-            
-
+            <button class="remove-from-cart-btn" data-name="${item.name}">
+                Remover
+            </button>
         </div>        
        `;
 
         total += item.price * item.quantity;
-       cartItemsContainer.appendChild(cartItemElement);
-
+        cartItemsContainer.appendChild(cartItemElement);
     });
 
+    // Calcula o total final somando a taxa de entrega
+    const finalTotal = total + deliveryFee;
 
-    cartTotal.textContent = total.toLocaleString("pt-BR", {
+    // Atualiza os valores no HTML
+    document.getElementById("cart-subtotal").textContent = total.toLocaleString("pt-BR", {
         style: "currency",
         currency: "BRL"
     });
 
-    cartCounter.innerHTML = cart.length;
+    document.getElementById("cart-delivery").textContent = deliveryFee.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    });
 
+    document.getElementById("cart-total").textContent = finalTotal.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    });
+
+    // Atualiza o contador de itens no carrinho
+    cartCounter.innerHTML = cart.length;
 }
 
 
@@ -147,7 +158,7 @@ checkoutBtn.addEventListener("click", function(){
     const isOpen = checkRestaurantOpen();
         if(!isOpen){
         Toastify({
-            text: "Ops o restaurante está fechado!",
+            text: "Ops, a lanchonete está fechada!",
             duration: 3000,
             close: true,
             gravity: "top", // `top` or `bottom`
@@ -176,7 +187,8 @@ checkoutBtn.addEventListener("click", function(){
 
     // Formato mensagem WhatsApp
     const message = encodeURIComponent(cartItems + `\n 📍 Endereço: ${addressInput.value}`);
-    const phone = "35998471037"; // Número real do WhatsApp
+    //const phone = "35998471037"; // Número real do WhatsApp
+    const phone = "35998832330"; // Número real do WhatsApp
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 
     cart = [];
@@ -189,7 +201,7 @@ checkoutBtn.addEventListener("click", function(){
 function checkRestaurantOpen(){
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 19 && hora < 23;
+    return hora >= 10 && hora < 23;
     // true = restaurante está aberto
 }
 
