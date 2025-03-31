@@ -344,12 +344,24 @@
 
             <!-- Inicio Endereço -->
 
-            <p class="font-bold mt-4">Endereço de entrega</p><br>
-            <input type="text" placeholder="Digite seu endereço completo..." id="address" class="w-full border-2 p-1 rounded my-1"/>
+            <p class="">Nome do destinatário para entrega do pedido:</p>
+            <input type="text" id="name" class="w-full border-2 p-1 rounded my-1" />
+            <p class="">Endereço para entrega:</p>
+            <p class="">Nome da rua/Avenida ou rodovia:</p>
+            <input type="text" id="street" class="w-full border-2 p-1 rounded my-1" />
+            <p class="">Número da casa:</p>
+            <input type="text" id="number" class="w-full border-2 p-1 rounded my-1" />
+            <p class="">Bairro:</p>
+            <input type="text" id="neighborhood" class="w-full border-2 p-1 rounded my-1" />
+            <p class="">Ponto de referência para ajudar o motoboy á chegar mais rápido:</p>
+            <textarea id="reference" class="w-full border-2 p-1 rounded my-1"></textarea>
 
             <!-- Fim Endereço --> 
 
+
+            <!-- Início validação Endereço-->  
             <p class="text-red-500 hidden" id="address-warn">Digite o endereço completo!</p>
+            <!-- Fim validação do Endereço-->      
 
             <div class="flex items-center justify-between mt-5 w-full">
                 <button id="close-modal-btn">Fechar</button>
