@@ -322,50 +322,46 @@
     <!--FIM MENU-->
 
     <!--INÍCIO MODAL CART-->
-    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
-        
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">        
         <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
-
             <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
-
-            <hr>
-            <br>
+            <hr>            
             <!-- Inicio do Pedido -->
+            <p class="font-bold mt-4 text-center">Itens no carrinho</p>
             <div id="cart-items" class="flex justify-between mb-2 flex-col"></div> <!-- Itens do Carrinho-->
+            <hr>   
+            <p class="font-bold mt-4 text-center">Pedido</p> 
+            <p class="font-bold">Valor do pedido: <span id="cart-subtotal">R$ 0.00</span></p>
+            <p class="font-bold">Valor da taxa de entrega: <span id="cart-delivery">R$ 5.00</span></p>
+            <p class="font-bold">Valor total do pedido: <span id="cart-total">R$ 0.00</span></p>
+            <br><hr>                  
+            <!-- Fim do Pedido -->            
+            <!-- Inicio Endereço-->  
 
-            <p class="font-bold">Pedido: <span id="cart-subtotal">R$ 0.00</span></p>
-            <p class="font-bold">Taxa de Entrega: <span id="cart-delivery">R$ 5.00</span></p>
-            <p class="font-bold">Total do Pedido: <span id="cart-total">R$ 0.00</span></p>
-            <br>
+                <!-- Endereço simples
+                <p class="">Endereço de entrega</p><br>
+                <input type="text" placeholder="Digite seu endereço completo ..." id="address" class="w-full border-2 p-1 rounded my-1"/>
+                --> 
 
-            <hr>         
-            
-            <!-- Fim do Pedido -->
-
-            <!-- Inicio Endereço
-            <p class="">Nome do destinatário para entrega do pedido:</p>
-            <input type="text" id="name" class="w-full border-2 p-1 rounded my-1" />
-            <p class="">Endereço para entrega:</p>
-            <p class="">Nome da rua/Avenida ou rodovia:</p>
-            <input type="text" id="street" class="w-full border-2 p-1 rounded my-1" />
-            <p class="">Número da casa:</p>
-            <input type="text" id="number" class="w-full border-2 p-1 rounded my-1" />
-            <p class="">Bairro:</p>
-            <input type="text" id="neighborhood" class="w-full border-2 p-1 rounded my-1" />
-            <p class="">Ponto de referência para ajudar o motoboy á chegar mais rápido:</p>
-            <textarea id="reference" class="w-full border-2 p-1 rounded my-1"></textarea>
-            Fim Endereço --> 
-
-            <!-- Inicio Endereço --> 
-            <p class="font-bold mt-4">Endereço de entrega</p>
-            <input type="text" placeholder="Digite seu endereço completo ..." id="address" class="w-full border-2 p-1 rounded my-1"/>
-            
-            
+                <!-- Endereço completo-->
+                <p class="font-bold mt-4 text-center">Endereço</p> 
+                <p class="font-bold mt-4">Nome:</p>
+                <input type="text" id="name" class="w-full border-2 p-1 rounded my-1" placeholder="Qual é o nome do destinatário para entrega do pedido?"/>
+                <p class="font-bold mt-4">Endereço:</p>
+                <input type="text" id="street" class="w-full border-2 p-1 rounded my-1" placeholder="Qual é o endereço para entrega? - nome da rua/avenida ou rodovia."/>
+                <p class="font-bold mt-4">Número:</p>
+                <input type="text" id="number" class="w-full border-2 p-1 rounded my-1" placeholder="Qual é o número da casa?"/>
+                <p class="font-bold mt-4">Bairro:</p>
+                <input type="text" id="neighborhood" class="w-full border-2 p-1 rounded my-1" placeholder="Qual é o bairro?"/>
+                <p class="font-bold mt-4">Cidade:</p>
+                <input type="text" id="city" class="w-full border-2 p-1 rounded my-1" placeholder="Qual é a cidade?"/>
+                <p class="font-bold mt-4">Ponto de Referência:</p>
+                <textarea id="reference" class="w-full border-2 p-1 rounded my-1" placeholder="Qual a referência? Para ajudar o motoboy á chegar mais rápido."></textarea>
             <!-- Fim Endereço --> 
-            
+
             <!-- Início validação Endereço-->  
-            <p class="text-red-500 hidden" id="address-warn">Digite o endereço completo!</p>
-            <!-- Fim validação do Endereço-->      
+            <p class="text-red-500 hidden" id="address-warn">Por favor, digite o endereço completo!</p>
+            <!-- Fim validação do Endereço-->
 
             <div class="flex items-center justify-between mt-5 w-full">
                 <button id="close-modal-btn">Fechar</button>
