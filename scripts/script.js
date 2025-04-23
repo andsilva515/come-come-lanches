@@ -216,7 +216,7 @@ checkoutBtn.addEventListener("click", function(){
     // Monta a mensagem do carrinho
     const cartItems = cart.map((item) => {
         return (
-            `📍 *Itens do Pedido:*\n🍔 ${item.name} - 🔢 ${item.quantity}x - 💰 R$${item.price.toFixed(2)}`
+            `\n\n *Itens do Carrinho:*\n🍔 ${item.name} - 🔢 ${item.quantity}x - 💰 R$${item.price.toFixed(2)}`
         );
     }).join("\n");
 
@@ -229,7 +229,7 @@ checkoutBtn.addEventListener("click", function(){
     const reference = document.getElementById("reference").value.trim();
 
     // Monta o texto do endereço formatado
-    const addressText = `\n\n📍 *Endereço para entrega:*\n👤 Nome: ${name}\n🏠 Rua: ${street}, Nº ${number}\n📌 Bairro: ${neighborhood}\n🌆 Cidade: ${city}\n📍 Referência: ${reference}`;
+    const addressText = `\n\n *Endereço para entrega:*\n👤 Nome: ${name}\n🏠 Rua: ${street}, Nº ${number}\n📌 Bairro: ${neighborhood}\n🌆 Cidade: ${city}\n📍 Referência: ${reference}`;
 
     // Mensagem final para WhatsApp
     const message = encodeURIComponent(cartItems + addressText);
