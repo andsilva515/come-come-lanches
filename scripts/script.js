@@ -216,7 +216,7 @@ checkoutBtn.addEventListener("click", function(){
     // Monta a mensagem do carrinho
     const cartItems = cart.map((item) => {
         return (
-            `🍔 ${item.name} - 🔢 ${item.quantity}x - 💰 R$${item.price.toFixed(2)}`
+            `📍 *Itens do Pedido:*\n🍔 ${item.name} - 🔢 ${item.quantity}x - 💰 R$${item.price.toFixed(2)}`
         );
     }).join("\n");
 
