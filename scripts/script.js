@@ -141,19 +141,6 @@ function removeItemCart(name){
 }
 
 // Valida campo endereço
-
-// Valida endereço simples
-// addressInput.addEventListener("input", function(event){
-//     let inputValue = event.target.value;
-
-//     if(inputValue !== ""){
-//         addressInput.classList.remove("border-red-500")
-//         addressWarn.classList.add("hidden")
-//     }
-// })
-
-
-// Valida endereço completo
 document.addEventListener("DOMContentLoaded", function () {
     const fields = ["name", "street", "number", "neighborhood", "city", "reference"];
     const addressWarn = document.getElementById("address-warn");
@@ -171,6 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
     checkoutBtn.addEventListener("click", function () {
         let isValid = true;
 
+        // Verifica se todos os campos foram preenchidos
         fields.forEach(field => {
             const input = document.getElementById(field);
             if (input.value.trim() === "") {
@@ -181,12 +169,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!isValid) {
             addressWarn.classList.remove("hidden");
-        } else {
-            alert("Pedido finalizado com sucesso!");
-        }
+            return; // Sai da função se houver campos
+        } 
     });
 });
-
 
 
 // Finaliza pedido
@@ -209,31 +195,51 @@ checkoutBtn.addEventListener("click", function(){
         return;
      }
 
-    if(cart.length === 0) return;
-    if(addressInput.value === ""){
-        addressWarn.classList.remove("hidden")
-        addressInput.classList.add("border-red-500")
-        return;
-    }  
+    if(cart.length === 0) return; 
 
-    //Enviar o pedido para API WhatsApp    
+    const fields = ["name", "street", "number", "neighborhood", "city", "reference"];
+    let isValid = true;
+
+    fields.forEach(field => {
+        const input = document.getElementById(field);
+        if (input.value.trim() === "") {
+            input.classList.add("border-red-500");
+            isValid = false;
+        }
+    });
+
+    if (!isValid) {
+        addressWarn.classList.remove("hidden");
+        return;
+    }
+
+    // Monta a mensagem do carrinho
     const cartItems = cart.map((item) => {
         return (
             `🍔 ${item.name} - 🔢 ${item.quantity}x - 💰 R$${item.price.toFixed(2)}`
-        )
-    }).join("\n")
+        );
+    }).join("\n");
 
-    // Formato mensagem WhatsApp
-    const message = encodeURIComponent(cartItems + `\n 📍 Endereço: ${addressInput.value}`);
-    const phone = "35998471037"; // Número real do WhatsApp
-    // const phone = "35998832330"; // Número real do WhatsApp
+    // Captura os valores dos campos de endereço
+    const name = document.getElementById("name").value.trim();
+    const street = document.getElementById("street").value.trim();
+    const number = document.getElementById("number").value.trim();
+    const neighborhood = document.getElementById("neighborhood").value.trim();
+    const city = document.getElementById("city").value.trim();
+    const reference = document.getElementById("reference").value.trim();
+
+    // Monta o texto do endereço formatado
+    const addressText = `\n\n📍 *Endereço para entrega:*\n👤 Nome: ${name}\n🏠 Rua: ${street}, Nº ${number}\n📌 Bairro: ${neighborhood}\n🌆 Cidade: ${city}\n📍 Referência: ${reference}`;
+
+    // Mensagem final para WhatsApp
+    const message = encodeURIComponent(cartItems + addressText);
+    const phone = "35998832330";
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 
+    // Limpa o carrinho e atualiza modal
     cart = [];
     updateCartModal();
-
-})
-
+});
 
 // Verificar a hora e manipular o card do horário
 function checkRestaurantOpen(){
