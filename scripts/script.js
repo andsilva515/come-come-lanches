@@ -233,7 +233,7 @@ checkoutBtn.addEventListener("click", function(){
 
     // Mensagem final para WhatsApp
     const message = encodeURIComponent(cartItems + addressText);
-    const phone = "35998832330";
+    const phone = "35998471037";
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 
     // Limpa o carrinho e atualiza modal
