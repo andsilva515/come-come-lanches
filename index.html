@@ -347,7 +347,11 @@
                 <p class="font-bold mt-4 text-center">Endereço</p> 
                 <p class="font-bold mt-4">Nome:</p>
                 <input type="text" id="name" class="w-full border-2 p-1 rounded my-1" placeholder="Qual é o nome para a entrega?"/>
-                <p class="font-bold mt-4">Endereço:</p>
+
+                <p class="font-bold mt-4">Tefefone:</p>
+                <input type="tel" id="telefone" class="w-full border-2 p-1 rounded my-1" required pattern="[0-9]{10,11}" placeholder="(99) 99999-9999"/>     
+
+                <p class="font-bold mt-4">Endereço:</p>                
                 <input type="text" id="street" class="w-full border-2 p-1 rounded my-1" placeholder="Qual é o endereço?"/>
                 <p class="font-bold mt-4">Número:</p>
                 <input type="text" id="number" class="w-full border-2 p-1 rounded my-1" placeholder="Qual é o número da casa?"/>
@@ -358,6 +362,30 @@
                 <p class="font-bold mt-4">Ponto de Referência:</p>
                 <textarea id="reference" class="w-full border-2 p-1 rounded my-1" placeholder="Qual a referência?"></textarea>
             <!-- Fim Endereço --> 
+
+            <label class="block text-gray-700 font-bold mb-2">Forma de pagamento:</label>
+                <div class="flex space-x-4">
+                  <button type="button" 
+                    class="forma-pagamento-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded"
+                    data-forma="Cartão">
+                    Cartão
+                  </button>
+                  <button 
+                    type="button" 
+                    class="forma-pagamento-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded"
+                    data-forma="Dinheiro">
+                    Dinheiro
+                  </button>
+                  <button 
+                    type="button" 
+                    class="forma-pagamento-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded"
+                    data-forma="Pix">
+                    Pix
+                  </button>
+                </div>
+                <input type="hidden" id="formaPagamento" name="formaPagamento" required>
+             
+                <hr>    
 
             <!-- Início validação Endereço-->  
             <p class="text-red-500 hidden" id="address-warn">Por favor, digite o endereço completo!</p>

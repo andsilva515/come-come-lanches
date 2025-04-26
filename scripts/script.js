@@ -249,7 +249,6 @@ function checkRestaurantOpen(){
     // true = restaurante está aberto
 }
 
-
 const spanItem = document.getElementById("date-span")
 const isOpen = checkRestaurantOpen();
 
