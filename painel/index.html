@@ -66,13 +66,13 @@
         // Verifica se o usuário está logado
         if (sessionStorage.getItem('loggedIn') !== 'true') {
             // Se não estiver, volta pro login
-            window.location.href = "../login/login.html"
+            window.location.href = "../login/index.html"
         }
 
         // Sair bo painel administrativo
         function logout() {
             sessionStorage.removeItem('loggedIn'); // Remove o login
-            window.location.href = "../login/login.html"; // Volta para o login
+            window.location.href = "../login/index.html"; // Volta para o login
         }
     </script>
     
