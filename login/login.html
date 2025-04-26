@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Come Come Lanches</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Usuário">
+    <input type="password" id="password" placeholder="Senha">
+    <button onclick="login()">Entrar</button>
+    <div id="error-message" class="error"></div>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const errorMessage = document.getElementById('error-message');
+
+      // Usuário e senha esperados (pode depois buscar no servidor)
+      const validUsername = "admin";
+      const validPassword = "1234";
+
+      if (username === validUsername && password === validPassword) {
+        // Salva informação de login
+        sessionStorage.setItem('loggedIn', 'true');
+
+        // Redireciona para painel
+        window.location.href = "../painel/painel.html";  // Nome do seu arquivo do painel
+      } else {
+        // Login incorreto, mostra mensagem
+        errorMessage.textContent = "Usuário ou senha inválidos!";
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo | Come Come Lanches</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>          
+    <header>
+        <h1>Painel Administrativo</h1>     
+    </header>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <div class="container">     
+        
+        <nav id="sidebar">
+            <h2>Menu</h2>       
+            <ul>
+                <li><a href="#funcionamento">Funcionamento da Loja</a></li>
+                <li><a href="#clientes">Controle dos Clientes</a></li>
+                <li><a href="#pedidos">Controle de Pedidos</a></li>
+                <li><a href="#">Configurações</a></li>
+                <li><a href="#"onclick="logout()">Sair</a></li>                                                   
+            </ul>    
+        </nav>
+
+        <main>           
+            <section id="Funcionamento">
+                <h3>Funcionamento da Loja</h3>
+                <p>Configure os horários de funcionamento.</p>
+            </section>
+
+            <section id="clientes">
+                <h3>Controle dos Clientes</h3>
+                <p>Gerencie as informações dos seus clientes.</p>
+            </section>
+
+            <section id="pedidos">
+                <h3>Controle de Pedidos</h3>
+                <p>Acompanhe os pedidos em andamento e históricos.</p>
+            </section>
+
+        </main>                               
+
+    </div>    
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+
+        function toggleMenu() {
+            sidebar.classList.toggle('active');
+        }
+
+        document.addEventListener('click', function(event) {
+            const isClickInsideMenu = sidebar.contains(event.target);
+            const isClickOnToggle = menuToggle.contains(event.target);
+
+            if (!isClickInsideMenu && !isClickOnToggle) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        // Verifica se o usuário está logado
+        if (sessionStorage.getItem('loggedIn') !== 'true') {
+            // Se não estiver, volta pro login
+            window.location.href = "../login/login.html"
+        }
+
+        // Sair bo painel administrativo
+        function logout() {
+            sessionStorage.removeItem('loggedIn'); // Remove o login
+            window.location.href = "../login/login.html"; // Volta para o login
+        }
+    </script>
+    
+</body>
+</html>

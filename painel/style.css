@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;       
+}
+
+header {
+    /*background-color: #ff6347; Cor tipo vermelho tomate */
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    text-align: center;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color:rgb(170, 166, 166);  
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    width: 220px;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 1rem 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;    
+}
+
+main {
+    flex: 1;
+    background-color:rgb(170, 166, 166);   
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+section {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0,0,0.1);
+}
+
+/* Responsivo */
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        height: calc(100% - 60px);
+        width: 200px;
+        background-color: #333;
+        transform: translateX(-100%);
+        z-index: 1000;
+    }
+
+    nav.active {
+        transform: translateX(0);
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+}
