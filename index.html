@@ -327,13 +327,13 @@
             <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
             <hr>            
             <!-- Inicio do Pedido -->
-            <p class="font-bold mt-4 text-center">Itens no carrinho</p>
+            <p class="font-bold mt-4 text-center">Itens do pedido</p>
             <div id="cart-items" class="flex justify-between mb-2 flex-col"></div> <!-- Itens do Carrinho-->
             <hr>   
-            <p class="font-bold mt-4 text-center">Pedido</p> 
-            <p class="font-bold">Valor do pedido: <span id="cart-subtotal">R$ 0.00</span></p>
-            <p class="font-bold">Valor da taxa de entrega: <span id="cart-delivery">R$ 5.00</span></p>
-            <p class="font-bold">Valor total do pedido: <span id="cart-total">R$ 0.00</span></p>
+            <p class="font-bold mt-4 text-center">Valor do pedido</p> 
+            <p class="">Pedido: <span id="cart-subtotal">R$ 0.00</span></p>
+            <p class="">Taxa de entrega: <span id="cart-delivery">R$ 5.00</span></p>
+            <p class="">Total: <span id="cart-total">R$ 0.00</span></p>
             <br><hr>                  
             <!-- Fim do Pedido -->            
             <!-- Inicio Endereço-->  
@@ -344,50 +344,41 @@
                 --> 
 
                 <!-- Endereço completo-->
-                <p class="font-bold mt-4 text-center">Endereço</p> 
-                <p class="font-bold mt-4">Nome:</p>
+                <p class="font-bold mt-4 text-center">Endereço para ntrega</p> 
+                <p class=" mt-4">Nome:</p>
                 <input type="text" id="name" class="w-full border-2 p-1 rounded my-1" placeholder="Qual é o nome para a entrega?"/>
 
-                <p class="font-bold mt-4">Tefefone:</p>
+                <p class=" mt-4">Tefefone:</p>
                 <input type="tel" id="telefone" class="w-full border-2 p-1 rounded my-1" required pattern="[0-9]{10,11}" placeholder="(99) 99999-9999"/>     
 
-                <p class="font-bold mt-4">Endereço:</p>                
+                <p class=" mt-4">Endereço:</p>                
                 <input type="text" id="street" class="w-full border-2 p-1 rounded my-1" placeholder="Qual é o endereço?"/>
-                <p class="font-bold mt-4">Número:</p>
+                <p class="mt-4">Número:</p>
                 <input type="text" id="number" class="w-full border-2 p-1 rounded my-1" placeholder="Qual é o número da casa?"/>
-                <p class="font-bold mt-4">Bairro:</p>
+                <p class="mt-4">Bairro:</p>
                 <input type="text" id="neighborhood" class="w-full border-2 p-1 rounded my-1" placeholder="Qual é o bairro?"/>
-                <p class="font-bold mt-4">Cidade:</p>
+                <p class=" mt-4">Cidade:</p>
                 <input type="text" id="city" class="w-full border-2 p-1 rounded my-1" placeholder="Qual é a cidade?"/>
-                <p class="font-bold mt-4">Ponto de Referência:</p>
+                <p class="mt-4">Ponto de Referência:</p>
                 <textarea id="reference" class="w-full border-2 p-1 rounded my-1" placeholder="Qual a referência?"></textarea>
             <!-- Fim Endereço --> 
 
             <!-- Início validação Endereço-->  
             <p class="text-red-500 hidden" id="address-warn">Por favor, digite o endereço completo!</p>
             <!-- Fim validação do Endereço-->           
-    
+            
+            <!-- Formas de Pagamento-->
+              
 
-            <label class="block text-gray-700 font-bold mb-2">Forma de pagamento:</label>
+            <p class="block text-gray-700 font-bold mb-2 text-center">Formas de pagamento: </p>
                 <div class="flex space-x-4">                
-                  <button 
-                    type="button" 
-                    class="forma-pagamento-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded"
-                    data-forma="Dinheiro">
-                    Dinheiro
-                  </button>
-                  <button type="button" 
-                  class="forma-pagamento-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded"
-                  data-forma="Cartão">
-                  Cartão
-                </button>
-                  <button 
-                    type="button" 
-                    class="forma-pagamento-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded"
-                    data-forma="Pix">
-                    Pix
-                  </button>
+                  <button type="button" class="forma-pagamento-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded"            data-forma="Dinheiro">Dinheiro </button>
+                  <button type="button" class="forma-pagamento-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded"
+                  data-forma="Cartão"> Cartão </button>
+                  <button type="button" class="forma-pagamento-btn bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded"
+                    data-forma="Pix"> Pix </button>
                 </div>
+                
                 <input type="hidden" id="formaPagamento" name="formaPagamento" required>
              
                 <hr> 

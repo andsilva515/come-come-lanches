@@ -249,6 +249,26 @@ function checkRestaurantOpen(){
     // true = restaurante está aberto
 }
 
+ // Selecionar a forma de pagamento
+ const botoesPagamento = document.querySelectorAll(".forma-pagamento-btn");
+ const inputFormaPagamento = document.getElementById("formaPagamento");
+
+ botoesPagamento.forEach(botao => {
+   botao.addEventListener("click", () => {
+     // Remove destaque de todos
+     botoesPagamento.forEach(b => b.classList.remove("bg-blue-500", "text-white"));
+     botoesPagamento.forEach(b => b.classList.add("bg-gray-200", "text-gray-800"));
+     
+     // Destaca o selecionado
+     botao.classList.remove("bg-gray-200", "text-gray-800");
+     botao.classList.add("bg-blue-500", "text-white");
+
+     // Atualiza o input escondido
+     inputFormaPagamento.value = botao.getAttribute("data-forma");
+   });
+ });
+
+
 const spanItem = document.getElementById("date-span")
 const isOpen = checkRestaurantOpen();
 
