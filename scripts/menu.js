@@ -9,95 +9,95 @@ const menuItems = [
     name: "02 - Come-Come Maionese",
     description: "Pão, hamburguer, mussarela, batata palha, maionese.",
     price: "10.00",
-    imgSrc: "./assets/logo-novo.png",
+    imgSrc: "./assets/logo-novo.PNG",
   },
   {
     name: "03 - Come-Come Egg",
     description: "Pão, hamburguer, mussarela, ovo, batata palha, maionese e molho especial.",
     price: "14.00",
-    imgSrc: "./assets/logo-novo.png",
+    imgSrc: "./assets/logo-novo.PNG",
   },  
   
   {
     name: "04 - Come-Come Salada",
     description: "Pão, hamburguer, mussarela, alface, tomate, batata palha e molho especial.",
     price: "15.00",
-    imgSrc: "./assets/logo-novo.png",
+    imgSrc: "./assets/logo-novo.PNG",
   },
 
   {
     name: "05 - Come-Come Salada Egg",
     description: "Pão, hamburguer, mussarela, alface, tomate, ovo, batata palha e molho especial.",
     price: "16.00",
-    imgSrc: "./assets/logo-novo.png",
+    imgSrc: "./assets/logo-novo.PNG",
   },
 
   {
     name: "06 - Come-Come Bacon",
     description: "Pão, hamburguer, mussarela, bacon, alface, tomate, batata palha e molho especial.",
     price: "28.00",
-    imgSrc: "./assets/logo-novo.png",
+    imgSrc: "./assets/logo-novo.PNG",
   },
 
   {
     name: "07 - Come-Come Bacon Egg",
     description: "Pão, hamburguer, mussarela, bacon, alface, tomate, ovo, batata palha e molho especial.",
     price: "30.00",
-    imgSrc: "./assets/logo-novo.png",
+    imgSrc: "./assets/logo-novo.PNG",
   },
 
   {
     name: "08 - Come-Come Tudo",
     description: "Pão, hambúrguer, mussarela, batata palha, alface, tomate, ovo, bacon, calabresa, lombo, milho, presunto, frango e molho especial.",
     price: "30.00",
-    imgSrc: "./assets/logo-novo.png",
+    imgSrc: "./assets/logo-novo.PNG",
   },
 
   {
     name: "09 - Come-Come Calabresa",
     description: "Pão, calabressa, mussarela, alface, tomate, batata palha e molho especial.",
     price: "24.00",
-    imgSrc: "./assets/logo-novo.png",
+    imgSrc: "./assets/logo-novo.PNG",
   },  
 
   {
       name: "10 - Come-Come Calabresa Egg",
       description: "Pão, Calabresa, mussarela, alface, tomate, ovo, batata palha e molho especial.",
       price: "26.00",
-      imgSrc: "./assets/logo-novo.png",
+      imgSrc: "./assets/logo-novo.PNG",
     },
     {
       name: "11 - Come-Come Lombo",
       description: "Pão, lombo, mussarela, batata palha, e molho especial.",
       price: "26.00",
-      imgSrc: "./assets/logo-novo.png",
+      imgSrc: "./assets/logo-novo.PNG",
     },
     {
       name: "12 - Come-Come Lombo c/ Maionese",
       description: "Pão, lombo, mussarela, batata palha, e maionese.",
       price: "26.00",
-      imgSrc: "./assets/logo-novo.png",
+      imgSrc: "./assets/logo-novo.PNG",
     },
     
     {
       name: "13 - Come-Come Lombo Egg",
       description: "Pão, lombo, mussarela, ovo, batata palha, e moho especial.",
       price: "28.00",
-      imgSrc: "./assets/logo-novo.png",
+      imgSrc: "./assets/logo-novo.PNG",
     },
 
     {
       name: "14 - Come-Come Lombo Salada",
       description: "Pão, lombo, mussarela, alface, tomate, batata palha, e moho especial.",
       price: "26.00",
-      imgSrc: "./assets/logo-novo.png",
+      imgSrc: "./assets/logo-novo.PNG",
     },
 
     {
       name: "15 - Come-Come Lombo Salada Egg",
       description: "Pão, lombo, mussarela, alface, tomate, ovo, batata palha, e moho especial.",
       price: "30.00",
-      imgSrc: "./assets/logo-novo.png",
+      imgSrc: "./assets/logo-novo.PNG",
     },
 
     {
