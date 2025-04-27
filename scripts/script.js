@@ -140,63 +140,14 @@ function removeItemCart(name){
     }
 }
 
+// Valida campo telefone
+// function validatePhoneNumber(phone) {
+//     const phonePattern = /^(\(\d{2}\)\s?|\d{2}\s?)\d{4,5}-\d{4}$/; // Expressão regular para validar o formato de telefone (ex: (xx) xxxx-xxxx ou xx xxxxx-xxxx
+//     return phonePattern.test(phone);
+// }
+
 // Valida campo endereço
-document.addEventListener("DOMContentLoaded", function () {
-    const fields = ["name", "street", "number", "neighborhood", "city", "reference"];
-    const addressWarn = document.getElementById("address-warn");
-    const checkoutBtn = document.getElementById("checkout-btn");
-
-    // Adiciona evento de input para remover erro ao digitar
-    fields.forEach(field => {
-        document.getElementById(field).addEventListener("input", function () {
-            this.classList.remove("border-red-500");
-            addressWarn.classList.add("hidden");
-        });
-    });
-
-    // Evento de clique no botão de finalização
-    checkoutBtn.addEventListener("click", function () {
-        let isValid = true;
-
-        // Verifica se todos os campos foram preenchidos
-        fields.forEach(field => {
-            const input = document.getElementById(field);
-            if (input.value.trim() === "") {
-                input.classList.add("border-red-500");
-                isValid = false;
-            }
-        });
-
-        if (!isValid) {
-            addressWarn.classList.remove("hidden");
-            return; // Sai da função se houver campos
-        } 
-    });
-});
-
-
-// Finaliza pedido
-checkoutBtn.addEventListener("click", function(){    
-    
-    // verifica lanchonete fechada
-    const isOpen = checkRestaurantOpen();
-        if(!isOpen){
-        Toastify({
-            text: "Ops, a lanchonete está fechada!",
-            duration: 3000,
-            close: true,
-            gravity: "top", // `top` or `bottom`
-            position: "right", // `left`, `center` or `right`
-            stopOnFocus: true, // Prevents dismissing of toast en hover
-            style: {
-                background: "#ef4444",
-            },            
-        }).showToast();
-        return; // aqui ele realmente para.
-     }
-
-    // if(cart.length === 0) return; 
-
+function validateAddressFields() {
     const fields = ["name", "street", "number", "neighborhood", "city", "reference"];
     let isValid = true;
 
@@ -205,19 +156,57 @@ checkoutBtn.addEventListener("click", function(){
         if (input.value.trim() === "") {
             input.classList.add("border-red-500");
             isValid = false;
+        } else {
+            input.classList.remove("border-red-500");
         }
     });
 
-    if (!isValid) {
-        addressWarn.classList.remove("hidden");
-        return;
+    return isValid;
+}
+
+// Finaliza pedido
+checkoutBtn.addEventListener("click", function() {  
+    
+    // verifica se a lanchonete está aberta
+    const isOpen = checkRestaurantOpen();
+    if (!isOpen) {
+        Toastify({
+            text: "Ops, a lanchonete está fechada!",
+            duration: 3000,
+            close: true,
+            gravity: "top",
+            position: "right",
+            stopOnFocus: true,
+            style: {
+                background: "#ef4444",
+            },            
+        }).showToast();
+        return; // Se está fechado, para tudo aqui!
     }
+
+    if (cart.length === 0) return; 
+
+    // Primeiro valida o endereço
+    const isAddressValid = validateAddressFields();
+    if (!isAddressValid) {
+        addressWarn.classList.remove("hidden");
+        return; // Se endereço inválido, para aqui!
+    } else {
+        addressWarn.classList.add("hidden");
+    }
+
+    // Valida o telefone
+    // const phone = document.getElementById("phone").value.trim();
+    // if (!validatePhoneNumber(phone)) {
+    //     document.getElementById("phone").classList.add("border-red-500");
+    //     return; // Se o telefone for inválido, para aqui!
+    // } else {
+    //     document.getElementById("phone").classList.remove("border-red-500")
+    // }
 
     // Monta a mensagem do carrinho
     const cartItems = cart.map((item) => {
-        return (
-            `🍔 ${item.name} - 🔢 ${item.quantity}x - 💰 R$${item.price.toFixed(2)}`
-        );
+        return `🍔 ${item.name} - 🔢 ${item.quantity}x - 💰 R$${item.price.toFixed(2)}`;
     }).join("\n");
 
     // Captura os valores dos campos de endereço
@@ -231,10 +220,13 @@ checkoutBtn.addEventListener("click", function(){
     // Monta o texto do endereço formatado
     const addressText = `\n\n *Endereço para entrega:*\n👤 Nome: ${name}\n🏠 Rua: ${street}, Nº ${number}\n📌 Bairro: ${neighborhood}\n🌆 Cidade: ${city}\n📍 Referência: ${reference}`;
 
+     // Inclui o telefone na mensagem
+    //  const phoneText = `📞 Telefone: ${phone}`;
+
     // Mensagem final para WhatsApp
-    const message = encodeURIComponent(cartItems + addressText);
-    const phone = "35998471037";
-    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+    // const message = encodeURIComponent(cartItems + addressText + "\n" +phoneText);
+    const whatsappPhone = "35998471037"; // Número de telefone da lanchonete
+    window.open(`https://wa.me/${whatsappPhone}?text=${message}`, "_blank");
 
     // Limpa o carrinho e atualiza modal
     cart = [];
@@ -245,7 +237,7 @@ checkoutBtn.addEventListener("click", function(){
 function checkRestaurantOpen(){
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 17 && hora < 19;
+    return hora >= 12 && hora < 15;
     // true = restaurante está aberto
 }
 
