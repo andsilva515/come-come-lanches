@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Finaliza pedido
-checkoutBtn.addEventListener("click", function(){  
+checkoutBtn.addEventListener("click", function(){    
     
     // verifica lanchonete fechada
     const isOpen = checkRestaurantOpen();
@@ -192,10 +192,10 @@ checkoutBtn.addEventListener("click", function(){
                 background: "#ef4444",
             },            
         }).showToast();
-        return;
+        return; // aqui ele realmente para.
      }
 
-    if(cart.length === 0) return; 
+    // if(cart.length === 0) return; 
 
     const fields = ["name", "street", "number", "neighborhood", "city", "reference"];
     let isValid = true;
