@@ -3,7 +3,7 @@ const menuItems = [
     name: "01 - Come-Come Burguer",
     description: "Pão, hamburguer, mussarela, alface, tomate, batata palha e molho especial.",
     price: "20.00",
-    imgSrc: "./assets/logo-novo.png",
+    imgSrc: "./assets/logo-novo.PNG",
   },
   {
     name: "02 - Come-Come Maionese",
