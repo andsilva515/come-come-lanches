@@ -233,12 +233,17 @@ checkoutBtn.addEventListener("click", function() {
     updateCartModal();
 });
 
-// Verificar a hora e manipular o card do horário
+// Verificar se o restaurante está aberto (dias e horários)
 function checkRestaurantOpen(){
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 12 && hora < 15;
-    // true = restaurante está aberto
+    const dia = data.getDay(); // 0 = Domingo, 5 = Sexta, 6 = Sábado
+
+    // Verifica se é sexta (5), sábado (6) ou domingo (0)
+    const diasPermitidos = [5, 6, 0];
+    const horarioPermitido = hora >= 19 && hora < 22; // das 19h às 22h
+
+    return diasPermitidos.includes(dia) && horarioPermitido;
 }
 
  // Selecionar a forma de pagamento
