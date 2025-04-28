@@ -233,6 +233,14 @@ checkoutBtn.addEventListener("click", function() {
     updateCartModal();
 });
 
+// Verificar a hora e manipular o card do horário
+// function checkRestaurantOpen(){
+//     const data = new Date();
+//     const hora = data.getHours();
+//     return hora >= 19 && hora < 22;
+//     // true = restaurante está aberto
+// }
+
 // Verificar se o restaurante está aberto (dias e horários)
 function checkRestaurantOpen(){
     const data = new Date();
