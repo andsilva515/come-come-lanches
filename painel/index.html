@@ -17,22 +17,22 @@
         
         <nav id="sidebar">
             <h2>Menu</h2>       
-            <ul>
-                <li><a href="#funcionamento">Lanchonete</a></li>
+            <ul>                
                 <li><a href="#clientes">Clientes</a></li>
                 <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#pedidos">Pedidos</a></li>
-                <li><a href="#">Configurações</a></li>
+                <li><a href="#pedidos">Pedidos</a></li>                
+                <li class="has-submenu">
+                    <a href="#" onclick="toggleSubmenu(event)">Configurações</a>
+                        <ul class="submenu">
+                            <li><a href="#usuarios">Usuários</a></li>
+                            <li><a href="#usuarios">Lanchonete</a></li>
+                        </ul>
+                </li>                
                 <li><a href="#"onclick="logout()">Sair</a></li>                                                   
             </ul>    
         </nav>
 
-        <main>           
-            <section id="funcionamento">
-                <h3>Funcionamento da Lanchonete</h3>
-                <p>Configure os horários de funcionamento.</p>
-            </section>
-
+        <main>         
             <section id="clientes">
                 <h3>Controle dos Clientes</h3>
                 <p>Gerencie as informações dos clientes.</p>
@@ -45,11 +45,16 @@
 
            <section id="pedidos">
                 <h3>Controle de Pedidos</h3>
-                <p>Gerencie os produtos do sistema.</p>
+                <p>Gerencie os pedidos do sistema.</p>
                 <p>Acompanhe os pedidos em andamento e históricos.</p>
             </section>
 
-           <section id="usuarios">
+            <section id="funcionamento">
+                <h3>Funcionamento da Lanchonete</h3>
+                <p>Configure os horários de funcionamento.</p>
+            </section>
+            
+            <section id="usuarios">
                 <h3>Controle de Usuários</h3>
                 <p>Gerencie os usuários do sistema.</p>
            </section>
@@ -66,6 +71,12 @@
             sidebar.classList.toggle('active');
         }
 
+        function toggleSubmenu(event) {
+            event.preventDefault();
+            const li = event.target.closest(".has-submenu");
+            li.classList.toggle("open");
+         }
+         
         document.addEventListener('click', function(event) {
             const isClickInsideMenu = sidebar.contains(event.target);
             const isClickOnToggle = menuToggle.contains(event.target);
