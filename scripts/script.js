@@ -225,7 +225,7 @@ checkoutBtn.addEventListener("click", function() {
 
     // Mensagem final para WhatsApp
     // const message = encodeURIComponent(cartItems + addressText + "\n" +phoneText);
-    const whatsappPhone = "35998471037"; // Número de telefone da lanchonete
+    const whatsappPhone = "35998832330"; // Número de telefone da lanchonete
     window.open(`https://wa.me/${whatsappPhone}?text=${message}`, "_blank");
 
     // Limpa o carrinho e atualiza modal
