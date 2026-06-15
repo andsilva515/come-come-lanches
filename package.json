@@ -4,7 +4,7 @@
   "description": "Cardápio online para delivery",
   "main": "index.js",
   "scripts": {
-    "eat":"npx tailwindcss -i ./styles/style.css -o ./styles/output.css --watch"
+    "eat": "npx tailwindcss -i ./styles/style.css -o ./styles/output.css --watch"
   },
   "keywords": [],
   "author": "",
