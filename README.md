@@ -18,7 +18,7 @@ https://come-come-lanches.vercel.app/
 
 foi descontinuada.
 
-O desenvolvimento e as novas funcionalidades seguem agora no **Esse de Que Pedidos**.
+O desenvolvimento e as novas funcionalidades seguem agora no **[Esse de Que Pedidos](https://essedequepedidos.vercel.app)**.
 
 ---
 
