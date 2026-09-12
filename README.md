@@ -1,91 +1,50 @@
-# Come-Come Lanches Delivery
+# Come Come Lanches
 
-![Badge de Licença](https://img.shields.io/badge/license-MIT-green)
-![Versão](https://img.shields.io/badge/version-1.0.0-blue)
-![Status](https://img.shields.io/badge/status-Em%20Desenvolvimento-yellow)
+> ⚠️ **Projeto descontinuado**
 
-Esta em fase de desenvolvimetno um sistema de cardápio digital. Que contém as funcionalidades de gerenciamento de pedidos, a impressão automática de pedidos, integração com APIs de terceiros e suporte a múltiplos usuários.
+Este projeto foi descontinuado e não receberá novas atualizações.
 
----
+O **Come Come Lanches** foi desenvolvido como uma solução de cardápio online e pedidos para delivery e serviu como uma das experiências que contribuíram para a evolução de uma solução mais completa, reutilizável e preparada para diferentes estabelecimentos.
 
-## Índice
+## 🚀 Conheça o Esse de Que Pedidos
 
-1. [Sobre o Projeto](#sobre-o-projeto)
-2. [Funcionalidades](#funcionalidades)
-3. [Pré-requisitos](#pré-requisitos)
-4. [Instalação](#instalação)
-5. [Como Usar](#como-usar)
-6. [Tecnologias Utilizadas](#tecnologias-utilizadas)
-7. [Contribuição](#contribuição)
-8. [Licença](#licença)
-9. [Contato](#contato)
+A evolução dessa ideia agora faz parte do **Esse de Que Pedidos**, uma plataforma de cardápio online e gestão de pedidos desenvolvida para negócios locais.
 
----
+Com o Esse de Que Pedidos, estabelecimentos podem disponibilizar seus produtos online, receber pedidos e organizar sua operação de forma simples e sem comissão sobre as vendas.
 
-## Sobre o Projeto
+👉 **Acesse:** https://essedequepedidos.vercel.app
 
-### 📖 Descrição
+### Principais recursos
 
-> Este projeto é um cardápio digital para delivery, que facilita o gerenciamento de pedidos e a impressão automática. Para lanchonetes, bares, restaurantes, etc. Ele inclui integração com APIs e suporte para múltiplos usuários.
-
----
-
-## Funcionalidades
-
-- [x] Adicionar produtos ao carrinho.
-- [x] Capturar endereço do cliente.
-- [x] Taxa de entrega no final do pedido.
-- [x] Endereço completo.
-- [x] Painel de gestão.   
-- [ ] Notificar sobre novos pedidos.
-- [ ] Enviar pedidos diretamente para impressão.
-- [ ] Adicionar e remover itens dos produtos.
-- [ ] Qr code do cardápio.
----
-
-## Pré-requisitos
-
-- Node.js v16 ou superior.
-- Banco de Dados (ex.: MongoDB ou MySQL).
-- Navegador compatível com ES6 para o frontend.
+- Cardápio online
+- Link exclusivo para o estabelecimento
+- Categorias e produtos
+- Carrinho de compras
+- Checkout
+- Entrega e retirada
+- Formas de pagamento
+- Gestão de pedidos
+- Layout responsivo
+- 0% de comissão sobre as vendas
 
 ---
 
-## Instalação
+## Sobre este repositório
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/nome-do-projeto.git
+Este repositório permanece disponível apenas como histórico do antigo projeto **Come Come Lanches**.
 
-2. Navegue até o diretório do projeto:
-   ```bash
-   cd nome-do-projeto
+A aplicação publicada originalmente em:
 
-3. Instale as dependências
-   ```bash
-   npm install
+https://come-come-lanches.vercel.app/
 
-4. Configure as variáveis de ambiente (exemplo no .env.example).
+foi descontinuada.
+
+O desenvolvimento e as novas funcionalidades seguem agora no **Esse de Que Pedidos**.
 
 ---
 
-## Como Usar
+### Esse de Que Pedidos
 
-1. Inicie o servidor de desenvolvimento:
-   ```bash
-   npm run dev
-   
-3. Acesse o frontend no navegador:
-   ```bash
-   http://localhost:3000
-   
----
+**Seu pedido, simples assim.**
 
-## Tecnologias Utilizadas
-
-## Contribuição
-
-## Licença
-
-## Contato
-
+Uma solução **[SdQ Digital](https://www.sdqdigital.com.br)**.
