@@ -14,7 +14,7 @@ Este repositório permanece disponível apenas como histórico do antigo projeto
 
 A aplicação publicada originalmente em:
 
-https://come-come-lanches.vercel.app/
+https://come-come-lanches.vercel.app
 
 foi descontinuada.
 
