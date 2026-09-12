@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family: Arial, sans-serif;
+
+  color: #0b1b2b;
+  background: #f7f9fc;
+}
+
+.discontinued {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+}
+
+.discontinued-card a {
+    display: inline-block;
+
+  margin-top: 24px;
+
+  color: #667085;
+
+
+  text-decoration: none;
+}
+
+.discontinued-card {
+  width: 100%;
+  max-width: 620px;
+
+  padding: 48px;
+
+  text-align: center;
+
+  border: 1px solid #e6ebf3;
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 20px 60px rgba(6, 29, 54, 0.08);
+}
+
+.status {
+  display: inline-flex;
+
+  margin-bottom: 24px;
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #667085;
+  background: #eef3f8;
+}
+
+h1 {
+  margin-bottom: 18px;
+
+  color: #061d36;
+
+  font-size: 36px;
+  line-height: 1.15;
+}
+
+.discontinued-card > p {
+  color: #667085;
+    text-align: justify;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.new-product {
+  margin: 32px 0;
+  padding: 24px;
+
+  border-radius: 18px;
+
+  background: #eafbf2;
+}
+
+.new-product span {
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #18bd69;
+}
+
+.new-product h2 {
+  margin: 6px 0;
+
+  color: #061d36;
+
+  font-size: 25px;
+}
+
+.new-product p {
+  color: #667085;
+
+  line-height: 1.5;
+}
+
+.primary-button {
+  display: block;
+
+  width: 100%;
+
+  padding: 15px 20px;
+
+  border-radius: 12px;
+
+  color: #061d36;
+  background: #20d67b;
+
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.primary-button:hover {
+  background: #18bd69;
+}
+
+.company-link {
+  display: inline-block;
+
+  margin-top: 24px;
+
+  color: #667085;
+
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.company-link strong {
+  color: #061d36;
+}
+
+@media (max-width: 650px) {
+
+  .discontinued {
+    padding: 18px;
+  }
+
+  .discontinued-card {
+    padding: 34px 22px;
+  }
+
+  h1 {
+    font-size: 29px;
+  }
+
+}
