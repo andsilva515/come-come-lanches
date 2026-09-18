@@ -10,7 +10,7 @@ Este projeto foi descontinuado e não receberá novas atualizações.
 
 Este repositório permanece disponível apenas como histórico do antigo projeto **Come Come Lanches**.
 
-O desenvolvimento e as novas funcionalidades seguem agora no **[Esse de Que Pedidos](https://essedequepedidos.vercel.app)**
+O desenvolvimento e as novas funcionalidades seguem agora no **[Esse de Que Pedidos](https://essedequepedidos.com.br)**
 
 ---
 
